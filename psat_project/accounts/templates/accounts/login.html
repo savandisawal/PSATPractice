@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Login — PSAT Practice{% endblock %}
+
+{% block content %}
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <h1>📘 PSAT Practice</h1>
+      <p>Grade 8 PSAT Study Tool</p>
+    </div>
+
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags|default:'info' }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="post" novalidate>
+      {% csrf_token %}
+
+      {% for field in form %}
+      <div class="form-group">
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}
+          {% for error in field.errors %}
+          <p style="color:var(--danger);font-size:.85rem;margin-top:.25rem">{{ error }}</p>
+          {% endfor %}
+        {% endif %}
+      </div>
+      {% endfor %}
+
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem">
+        Sign In
+      </button>
+    </form>
+
+    <p style="text-align:center;margin-top:1.25rem;font-size:.9rem;color:var(--text-muted)">
+      Don't have an account? <a href="{% url 'register' %}" style="color:var(--primary);font-weight:600">Register</a>
+    </p>
+    <p style="text-align:center;margin-top:.5rem;font-size:.85rem;color:var(--text-muted)">
+      Admin? <a href="/admin/" style="color:var(--text-muted)">Login here</a>
+    </p>
+  </div>
+</div>
+<script>
+  if (new URLSearchParams(window.location.search).get('logged_out')) {
+    document.querySelectorAll('input[type="text"], input[type="email"]').forEach(function(el) {
+      el.value = '';
+    });
+  }
+</script>
+{% endblock %}

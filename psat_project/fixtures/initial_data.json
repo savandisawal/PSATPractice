@@ -1,0 +1,1137 @@
+[
+  {
+    "model": "practice.subject",
+    "pk": 1,
+    "fields": {
+      "name": "Math",
+      "slug": "math",
+      "description": "Algebra, Advanced Math, Geometry & Data Analysis",
+      "icon": "\ud83d\udd22",
+      "test_duration_minutes": 40,
+      "questions_per_test": 25
+    }
+  },
+  {
+    "model": "practice.subject",
+    "pk": 2,
+    "fields": {
+      "name": "Reading & Writing",
+      "slug": "english",
+      "description": "Reading Comprehension, Grammar, Vocabulary & Writing",
+      "icon": "\ud83d\udcd6",
+      "test_duration_minutes": 40,
+      "questions_per_test": 25
+    }
+  },
+  {"model": "practice.topic", "pk": 1, "fields": {"subject": 1, "name": "Algebra"}},
+  {"model": "practice.topic", "pk": 2, "fields": {"subject": 1, "name": "Geometry"}},
+  {"model": "practice.topic", "pk": 3, "fields": {"subject": 1, "name": "Data Analysis"}},
+  {"model": "practice.topic", "pk": 4, "fields": {"subject": 1, "name": "Word Problems"}},
+  {"model": "practice.topic", "pk": 9, "fields": {"subject": 1, "name": "Advanced Math"}},
+  {"model": "practice.topic", "pk": 5, "fields": {"subject": 2, "name": "Reading Comprehension"}},
+  {"model": "practice.topic", "pk": 6, "fields": {"subject": 2, "name": "Grammar & Usage"}},
+  {"model": "practice.topic", "pk": 7, "fields": {"subject": 2, "name": "Vocabulary in Context"}},
+  {"model": "practice.topic", "pk": 8, "fields": {"subject": 2, "name": "Writing & Expression"}},
+  {"model": "practice.topic", "pk": 10, "fields": {"subject": 2, "name": "Punctuation"}},
+
+  {
+    "model": "practice.question", "pk": 1,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "easy",
+      "text": "What is the value of x if 2x + 7 = 19?",
+      "option_a": "4", "option_b": "5", "option_c": "6", "option_d": "7",
+      "correct_answer": "C",
+      "explanation": "Subtract 7 from both sides: 2x = 12. Divide by 2: x = 6.\n\nCheck: 2(6) + 7 = 12 + 7 = 19 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 2,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "easy",
+      "text": "Simplify: 5(x + 3) \u2212 2x",
+      "option_a": "3x + 15", "option_b": "3x + 3", "option_c": "7x + 15", "option_d": "5x + 3",
+      "correct_answer": "A",
+      "explanation": "Use the distributive property: 5(x + 3) = 5x + 15.\nThen subtract 2x: 5x + 15 \u2212 2x = 3x + 15.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 3,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "easy",
+      "text": "Which equation represents the statement: \u201c5 more than twice a number equals 21\u201d?",
+      "option_a": "2n + 5 = 21", "option_b": "5n + 2 = 21", "option_c": "2n \u2212 5 = 21", "option_d": "n + 5 = 21",
+      "correct_answer": "A",
+      "explanation": "\u201cTwice a number\u201d = 2n. \u201c5 more than\u201d means add 5. So: 2n + 5 = 21.\n\nSolving: 2n = 16, n = 8.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 4,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "If x + y = 10 and x \u2212 y = 4, what is the value of x?",
+      "option_a": "3", "option_b": "5", "option_c": "7", "option_d": "9",
+      "correct_answer": "C",
+      "explanation": "Add the two equations: (x + y) + (x \u2212 y) = 10 + 4\n2x = 14\nx = 7\n\nThen y = 10 \u2212 7 = 3. Check: 7 \u2212 3 = 4 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 5,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "Solve for x: 3(x \u2212 2) + 4 = 2x + 5",
+      "option_a": "3", "option_b": "5", "option_c": "6", "option_d": "7",
+      "correct_answer": "D",
+      "explanation": "Step 1: Expand: 3x \u2212 6 + 4 = 2x + 5\nStep 2: Simplify left side: 3x \u2212 2 = 2x + 5\nStep 3: Subtract 2x: x \u2212 2 = 5\nStep 4: Add 2: x = 7\n\nCheck: 3(7\u22122)+4 = 15+4 = 19; 2(7)+5 = 19 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 6,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "A line passes through the point (0, 3) and has a slope of 2. What is the value of y when x = 5?",
+      "option_a": "11", "option_b": "13", "option_c": "15", "option_d": "17",
+      "correct_answer": "B",
+      "explanation": "The equation is y = mx + b. With slope m = 2 and y-intercept b = 3:\ny = 2x + 3\n\nSubstitute x = 5:\ny = 2(5) + 3 = 10 + 3 = 13",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 7,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "If 4x \u2212 3y = 12 and y = 2, what is the value of x?",
+      "option_a": "3.0", "option_b": "3.5", "option_c": "4.5", "option_d": "6.0",
+      "correct_answer": "C",
+      "explanation": "Substitute y = 2 into the equation:\n4x \u2212 3(2) = 12\n4x \u2212 6 = 12\n4x = 18\nx = 4.5",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 8,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "A car travels at a constant speed of 60 miles per hour. How many hours will it take to travel 195 miles?",
+      "option_a": "3.25", "option_b": "3.50", "option_c": "4.00", "option_d": "2.75",
+      "correct_answer": "A",
+      "explanation": "Time = Distance \u00f7 Speed = 195 \u00f7 60 = 3.25 hours.\n\nThis equals 3 hours and 15 minutes.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 9,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "Maria has (3x + 5) dollars and John has (2x + 8) dollars. Together they have $43. How many dollars does Maria have?",
+      "option_a": "18", "option_b": "20", "option_c": "23", "option_d": "25",
+      "correct_answer": "C",
+      "explanation": "Set up the equation: (3x + 5) + (2x + 8) = 43\n5x + 13 = 43\n5x = 30\nx = 6\n\nMaria has 3(6) + 5 = 18 + 5 = 23 dollars.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 10,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "Which of the following gives ALL solutions to |2x \u2212 3| = 7?",
+      "option_a": "x = \u22122 only", "option_b": "x = 5 only", "option_c": "x = 5 or x = \u22122", "option_d": "x = 2 or x = \u22125",
+      "correct_answer": "C",
+      "explanation": "An absolute value equation |A| = 7 has two cases:\nCase 1: 2x \u2212 3 = 7 \u2192 2x = 10 \u2192 x = 5\nCase 2: 2x \u2212 3 = \u22127 \u2192 2x = \u22124 \u2192 x = \u22122\n\nBoth solutions must be checked and both are valid.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 11,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "If \u22123 \u2264 2x + 1 \u2264 7, which of the following represents all possible values of x?",
+      "option_a": "\u22121 \u2264 x \u2264 4", "option_b": "\u22122 \u2264 x \u2264 3", "option_c": "\u22124 \u2264 x \u2264 6", "option_d": "0 \u2264 x \u2264 4",
+      "correct_answer": "B",
+      "explanation": "Subtract 1 from all three parts:\n\u22123 \u2212 1 \u2264 2x \u2264 7 \u2212 1\n\u22124 \u2264 2x \u2264 6\n\nDivide all parts by 2:\n\u22122 \u2264 x \u2264 3",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 12,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "If f(x) = 2x\u00b2 \u2212 3x + 1, what is f(\u22122)?",
+      "option_a": "\u22121", "option_b": "3", "option_c": "15", "option_d": "19",
+      "correct_answer": "C",
+      "explanation": "Substitute x = \u22122:\nf(\u22122) = 2(\u22122)\u00b2 \u2212 3(\u22122) + 1\n= 2(4) + 6 + 1\n= 8 + 6 + 1\n= 15",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 13,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "easy",
+      "text": "A rectangle has a length of 8 cm and a width of 5 cm. What is its perimeter?",
+      "option_a": "26 cm", "option_b": "40 cm", "option_c": "13 cm", "option_d": "30 cm",
+      "correct_answer": "A",
+      "explanation": "Perimeter of a rectangle = 2(length + width)\n= 2(8 + 5)\n= 2(13)\n= 26 cm",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 14,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "easy",
+      "text": "Two angles are supplementary. One angle measures 65\u00b0. What is the measure of the other angle?",
+      "option_a": "25\u00b0", "option_b": "115\u00b0", "option_c": "90\u00b0", "option_d": "125\u00b0",
+      "correct_answer": "B",
+      "explanation": "Supplementary angles add up to 180\u00b0.\n180\u00b0 \u2212 65\u00b0 = 115\u00b0",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 15,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "medium",
+      "text": "A triangle has angles measuring 40\u00b0 and 75\u00b0. What is the measure of the third angle?",
+      "option_a": "45\u00b0", "option_b": "55\u00b0", "option_c": "65\u00b0", "option_d": "75\u00b0",
+      "correct_answer": "C",
+      "explanation": "The sum of angles in a triangle is 180\u00b0.\n180\u00b0 \u2212 40\u00b0 \u2212 75\u00b0 = 65\u00b0",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 16,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "medium",
+      "text": "A circle has a radius of 7 cm. What is its area? (Use \u03c0 as the symbol for pi.)",
+      "option_a": "49\u03c0 cm\u00b2", "option_b": "14\u03c0 cm\u00b2", "option_c": "7\u03c0 cm\u00b2", "option_d": "98\u03c0 cm\u00b2",
+      "correct_answer": "A",
+      "explanation": "Area of a circle = \u03c0r\u00b2\n= \u03c0 \u00d7 7\u00b2\n= 49\u03c0 cm\u00b2\n\u2248 153.94 cm\u00b2",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 17,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "medium",
+      "text": "What is the distance between the points (1, 2) and (4, 6) on the coordinate plane?",
+      "option_a": "4", "option_b": "5", "option_c": "6", "option_d": "7",
+      "correct_answer": "B",
+      "explanation": "Use the distance formula: d = \u221a[(x\u2082\u2212x\u2081)\u00b2 + (y\u2082\u2212y\u2081)\u00b2]\n= \u221a[(4\u22121)\u00b2 + (6\u22122)\u00b2]\n= \u221a[9 + 16]\n= \u221a25\n= 5",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 18,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "hard",
+      "text": "A cylinder has a radius of 3 inches and a height of 5 inches. What is its volume?",
+      "option_a": "15\u03c0 in\u00b3", "option_b": "45\u03c0 in\u00b3", "option_c": "30\u03c0 in\u00b3", "option_d": "90\u03c0 in\u00b3",
+      "correct_answer": "B",
+      "explanation": "Volume of a cylinder = \u03c0r\u00b2h\n= \u03c0 \u00d7 (3)\u00b2 \u00d7 5\n= \u03c0 \u00d7 9 \u00d7 5\n= 45\u03c0 in\u00b3\n\u2248 141.37 in\u00b3",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 19,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "hard",
+      "text": "Two triangles are similar. The sides of the first triangle are 3, 5, and 7. The corresponding sides of the second triangle are 6, x, and 14. What is the value of x?",
+      "option_a": "7", "option_b": "8", "option_c": "10", "option_d": "12",
+      "correct_answer": "C",
+      "explanation": "Similar triangles have proportional sides. The ratio between corresponding sides:\n14 \u00f7 7 = 2, so the scale factor is 2.\n\nTherefore x = 5 \u00d7 2 = 10.\n\nVerify: 6/3 = 2, 10/5 = 2, 14/7 = 2 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 20,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "hard",
+      "text": "A right triangle has legs of length 5 and 12. What is the length of the hypotenuse?",
+      "option_a": "13", "option_b": "14", "option_c": "15", "option_d": "17",
+      "correct_answer": "A",
+      "explanation": "Use the Pythagorean theorem: c\u00b2 = a\u00b2 + b\u00b2\nc\u00b2 = 5\u00b2 + 12\u00b2\nc\u00b2 = 25 + 144\nc\u00b2 = 169\nc = \u221a169 = 13\n\nThis is a 5-12-13 Pythagorean triple.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 21,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "easy",
+      "text": "What is the mean (average) of the data set: 4, 7, 9, 12, 13?",
+      "option_a": "8", "option_b": "9", "option_c": "10", "option_d": "11",
+      "correct_answer": "B",
+      "explanation": "Mean = Sum \u00f7 Number of values\n= (4 + 7 + 9 + 12 + 13) \u00f7 5\n= 45 \u00f7 5\n= 9",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 22,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "medium",
+      "text": "What is the median of the data set: 3, 5, 7, 7, 9, 11?",
+      "option_a": "7", "option_b": "7.5", "option_c": "8", "option_d": "6",
+      "correct_answer": "A",
+      "explanation": "The data set is already sorted: 3, 5, 7, 7, 9, 11.\nWith 6 values (even), the median is the average of the 3rd and 4th values.\nMedian = (7 + 7) \u00f7 2 = 14 \u00f7 2 = 7",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 23,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "medium",
+      "text": "A store is offering a 25% discount on an item originally priced at $48. What is the sale price?",
+      "option_a": "$12", "option_b": "$24", "option_c": "$36", "option_d": "$38",
+      "correct_answer": "C",
+      "explanation": "Discount amount = 25% \u00d7 $48 = 0.25 \u00d7 48 = $12\nSale price = Original price \u2212 Discount = $48 \u2212 $12 = $36\n\nAlternatively: Sale price = 75% \u00d7 $48 = 0.75 \u00d7 48 = $36",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 24,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "medium",
+      "text": "A school survey recorded the number of students who prefer each subject: Math = 85, Science = 70, English = 95, Social Studies = 60. What is the total number of students surveyed?",
+      "option_a": "300", "option_b": "310", "option_c": "320", "option_d": "290",
+      "correct_answer": "B",
+      "explanation": "Total = 85 + 70 + 95 + 60\n= 155 + 155\n= 310 students",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 25,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "hard",
+      "text": "In a survey of 200 students, 40% said they prefer reading to watching television. How many students prefer reading?",
+      "option_a": "80", "option_b": "40", "option_c": "120", "option_d": "60",
+      "correct_answer": "A",
+      "explanation": "Number who prefer reading = 40% \u00d7 200 = 0.40 \u00d7 200 = 80 students",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 26,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "hard",
+      "text": "A bag contains 4 red marbles, 6 blue marbles, and 5 green marbles. If one marble is drawn at random, what is the probability it is blue?",
+      "option_a": "1/5", "option_b": "1/3", "option_c": "2/5", "option_d": "3/5",
+      "correct_answer": "C",
+      "explanation": "Total marbles = 4 + 6 + 5 = 15\nP(blue) = 6/15 = 2/5\n\nSimplify 6/15 by dividing both by 3: 2/5",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 27,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "hard",
+      "text": "A scatter plot shows the number of hours students study (x-axis) and their test scores (y-axis). The data shows a strong positive correlation. Based on the trend, what score would you predict for a student who studies 8 hours, given that a student who studied 4 hours scored 72 and one who studied 6 hours scored 81?",
+      "option_a": "Around 90", "option_b": "Around 72", "option_c": "Around 60", "option_d": "Around 81",
+      "correct_answer": "A",
+      "explanation": "A positive correlation means as x increases, y increases.\nFrom 4 to 6 hours: score increased by 9 points (rate of ~4.5 points per hour).\nFrom 6 to 8 hours (2 more hours): score increases by approximately 9 more points.\n81 + 9 = 90.\n\nA score around 90 is the best prediction.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 28,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "hard",
+      "text": "A jacket was originally priced at $80. It was marked up to $100. What is the percent increase in price?",
+      "option_a": "20%", "option_b": "25%", "option_c": "30%", "option_d": "15%",
+      "correct_answer": "B",
+      "explanation": "Percent increase = (New Value \u2212 Original Value) / Original Value \u00d7 100\n= (100 \u2212 80) / 80 \u00d7 100\n= 20 / 80 \u00d7 100\n= 0.25 \u00d7 100\n= 25%",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 29,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "easy",
+      "text": "If 3 notebooks cost $7.50, how much would 5 notebooks cost at the same price per notebook?",
+      "option_a": "$10.00", "option_b": "$11.50", "option_c": "$12.50", "option_d": "$15.00",
+      "correct_answer": "C",
+      "explanation": "Cost per notebook = $7.50 \u00f7 3 = $2.50\nCost of 5 notebooks = $2.50 \u00d7 5 = $12.50",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 30,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "medium",
+      "text": "Train A travels at 60 mph and Train B travels at 45 mph. Both trains leave from the same point at the same time, traveling in the same direction. How far apart will they be after 3 hours?",
+      "option_a": "15 miles", "option_b": "45 miles", "option_c": "105 miles", "option_d": "315 miles",
+      "correct_answer": "B",
+      "explanation": "Relative speed = 60 \u2212 45 = 15 mph\nDistance apart = Relative speed \u00d7 Time = 15 \u00d7 3 = 45 miles",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 31,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "medium",
+      "text": "A tank contains 50 liters of a 10% acid solution. How many liters of a 30% acid solution must be added to produce a 20% acid solution?",
+      "option_a": "25", "option_b": "40", "option_c": "50", "option_d": "75",
+      "correct_answer": "C",
+      "explanation": "Let x = liters of 30% solution to add.\nAcid equation: 50(0.10) + x(0.30) = (50 + x)(0.20)\n5 + 0.30x = 10 + 0.20x\n0.10x = 5\nx = 50 liters\n\nVerify: 50(0.10) + 50(0.30) = 5 + 15 = 20 acid in 100 total = 20% \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 32,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "medium",
+      "text": "Tom is 3 times as old as his sister. In 5 years, he will be twice as old as she will be. How old is Tom now?",
+      "option_a": "15", "option_b": "12", "option_c": "18", "option_d": "9",
+      "correct_answer": "A",
+      "explanation": "Let s = sister's age now. Tom's age = 3s.\nIn 5 years: 3s + 5 = 2(s + 5)\n3s + 5 = 2s + 10\ns = 5\n\nTom\u2019s age = 3(5) = 15 years old.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 33,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "hard",
+      "text": "Pipe A can fill a tank in 4 hours and Pipe B can fill the same tank in 6 hours. Working together, how many hours will it take to fill the tank?",
+      "option_a": "1.5 hours", "option_b": "2.0 hours", "option_c": "2.4 hours", "option_d": "5.0 hours",
+      "correct_answer": "C",
+      "explanation": "Combined rate = 1/4 + 1/6 = 3/12 + 2/12 = 5/12 of the tank per hour.\n\nTime = 1 \u00f7 (5/12) = 12/5 = 2.4 hours.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 34,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "hard",
+      "text": "Worker A can complete a job in 12 days. After Worker A has worked for 4 days alone, Worker B joins. Together they finish the remaining work in 4 more days. How many days would Worker B need to complete the entire job alone?",
+      "option_a": "6 days", "option_b": "8 days", "option_c": "12 days", "option_d": "16 days",
+      "correct_answer": "C",
+      "explanation": "Work done by A in 4 days = 4/12 = 1/3.\nRemaining work = 1 \u2212 1/3 = 2/3.\n\nTogether they finish 2/3 in 4 days:\n(1/12 + 1/b) \u00d7 4 = 2/3\n1/12 + 1/b = 1/6\n1/b = 1/6 \u2212 1/12 = 1/12\nb = 12 days",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 35,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "hard",
+      "text": "A rectangular garden is 3 feet longer than twice its width. If the perimeter of the garden is 48 feet, what is the area of the garden in square feet?",
+      "option_a": "84", "option_b": "108", "option_c": "119", "option_d": "136",
+      "correct_answer": "C",
+      "explanation": "Let w = width. Then length = 2w + 3.\nPerimeter: 2(w) + 2(2w + 3) = 48\n2w + 4w + 6 = 48\n6w = 42\nw = 7 feet\nLength = 2(7) + 3 = 17 feet\nArea = 7 \u00d7 17 = 119 sq ft",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 36,
+    "fields": {
+      "subject": 1, "topic": 9, "difficulty": "easy",
+      "text": "What are the solutions to x\u00b2 \u2212 9 = 0?",
+      "option_a": "x = 9 only", "option_b": "x = 3 only", "option_c": "x = 0 or x = 9", "option_d": "x = 3 or x = \u22123",
+      "correct_answer": "D",
+      "explanation": "x\u00b2 \u2212 9 = 0\nx\u00b2 = 9\nx = \u00b1\u221a9\nx = 3 or x = \u22123\n\nThis can also be factored as (x \u2212 3)(x + 3) = 0.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 37,
+    "fields": {
+      "subject": 1, "topic": 9, "difficulty": "medium",
+      "text": "What are the solutions to x\u00b2 \u2212 5x + 6 = 0?",
+      "option_a": "x = 2 and x = 3", "option_b": "x = 1 and x = 6", "option_c": "x = \u22122 and x = \u22123", "option_d": "x = 2 and x = \u22123",
+      "correct_answer": "A",
+      "explanation": "Factor the quadratic: x\u00b2 \u2212 5x + 6 = (x \u2212 2)(x \u2212 3) = 0\n\nSet each factor to zero:\nx \u2212 2 = 0 \u2192 x = 2\nx \u2212 3 = 0 \u2192 x = 3\n\nCheck: (2)(\u22125(2)+6 = 4\u221210+6 = 0 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 38,
+    "fields": {
+      "subject": 1, "topic": 9, "difficulty": "medium",
+      "text": "For which values of x does g(x) = 0 if g(x) = x\u00b2 + 2x \u2212 3?",
+      "option_a": "x = 3 and x = \u22121", "option_b": "x = 1 and x = \u22123", "option_c": "x = \u22123 and x = \u22121", "option_d": "x = 2 and x = \u22121",
+      "correct_answer": "B",
+      "explanation": "Factor: x\u00b2 + 2x \u2212 3 = (x + 3)(x \u2212 1) = 0\n\nSet each factor to zero:\nx + 3 = 0 \u2192 x = \u22123\nx \u2212 1 = 0 \u2192 x = 1\n\nSo x = 1 or x = \u22123.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 39,
+    "fields": {
+      "subject": 1, "topic": 9, "difficulty": "hard",
+      "text": "Which of the following is equivalent to (2x \u2212 3)(x + 4)?",
+      "option_a": "2x\u00b2 \u2212 12", "option_b": "2x\u00b2 + 11x \u2212 12", "option_c": "2x\u00b2 + 5x \u2212 12", "option_d": "2x\u00b2 \u2212 5x \u2212 12",
+      "correct_answer": "C",
+      "explanation": "Use FOIL (First, Outer, Inner, Last):\nFirst: 2x \u00d7 x = 2x\u00b2\nOuter: 2x \u00d7 4 = 8x\nInner: \u22123 \u00d7 x = \u22123x\nLast: \u22123 \u00d7 4 = \u221212\n\nCombine: 2x\u00b2 + 8x \u2212 3x \u2212 12 = 2x\u00b2 + 5x \u2212 12",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 40,
+    "fields": {
+      "subject": 1, "topic": 9, "difficulty": "hard",
+      "text": "A colony of bacteria doubles in size every 3 hours. If there are 500 bacteria at 12:00 PM, how many bacteria will there be at 6:00 PM?",
+      "option_a": "2,000", "option_b": "1,500", "option_c": "4,000", "option_d": "1,000",
+      "correct_answer": "A",
+      "explanation": "From 12:00 PM to 6:00 PM = 6 hours = 2 doubling periods.\n\n12:00 PM: 500\n3:00 PM: 500 \u00d7 2 = 1,000\n6:00 PM: 1,000 \u00d7 2 = 2,000\n\nFormula: 500 \u00d7 2\u00b2 = 500 \u00d7 4 = 2,000",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 41,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "easy",
+      "text": "PASSAGE\n\nMany scientists believe that regular exercise has significant benefits beyond physical health. Studies show that people who exercise regularly experience lower rates of depression and anxiety. Exercise increases the production of endorphins, chemicals in the brain that act as natural mood elevators. Even moderate activity, such as a 30-minute daily walk, can lead to measurable improvements in mental well-being.\n\nQUESTION\n\nWhat is the main idea of this passage?",
+      "option_a": "Exercise is only beneficial for physical health.",
+      "option_b": "Regular exercise can improve mental health in addition to physical health.",
+      "option_c": "Depression can be cured through exercise alone.",
+      "option_d": "Scientists disagree about the benefits of exercise.",
+      "correct_answer": "B",
+      "explanation": "The passage focuses on mental health benefits of exercise (endorphins, reduced depression/anxiety). Option A is directly contradicted. Options C and D misrepresent the passage. The main idea is stated in the first sentence and supported throughout.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 42,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "easy",
+      "text": "PASSAGE\n\nThe Great Wall of China was built over many centuries. Construction began as early as the 7th century BC and continued through the Ming dynasty (1368\u20131644 AD). The wall stretches approximately 13,000 miles and was primarily built to protect Chinese states from northern invasions. Today, it is one of the most visited tourist attractions in the world.\n\nQUESTION\n\nAccording to the passage, why was the Great Wall of China primarily built?",
+      "option_a": "To serve as a tourist attraction",
+      "option_b": "To connect different Chinese states",
+      "option_c": "To protect against northern invasions",
+      "option_d": "To demonstrate China\u2019s engineering abilities",
+      "correct_answer": "C",
+      "explanation": "The passage directly states: \u201cwas primarily built to protect Chinese states from northern invasions.\u201d The other options are not supported by the passage.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 43,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "easy",
+      "text": "PASSAGE\n\nDr. Amara approached the ancient manuscript with extraordinary care. She handled each fragile page as if it were a newborn child, knowing that centuries of history depended on her steady hands. Her colleagues often marveled at her patience; for Dr. Amara, rushing was simply not an option when dealing with irreplaceable artifacts.\n\nQUESTION\n\nThe word \u201cextraordinary\u201d in the first sentence most nearly means:",
+      "option_a": "Ordinary",
+      "option_b": "Exceptional",
+      "option_c": "Careless",
+      "option_d": "Routine",
+      "correct_answer": "B",
+      "explanation": "\u201cExtraordinary\u201d means beyond what is ordinary or usual\u2014exceptional. Context clues support this: she handled pages \u201cas if it were a newborn child\u201d and \u201crushing was simply not an option,\u201d showing her care was exceptional, not ordinary or routine.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 44,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nWhen the town council proposed closing the local library to cut costs, hundreds of residents showed up to the meeting. Students, teachers, senior citizens, and parents crowded the small town hall. Speaker after speaker described how the library had changed their lives\u2014teaching children to read, providing job seekers with computers, offering seniors a warm place to gather. By the end of the evening, the council had unanimously voted to keep the library open.\n\nQUESTION\n\nWhat can be most reasonably inferred about why the council changed its position?",
+      "option_a": "The council realized the library generated significant revenue.",
+      "option_b": "The community\u2019s strong support demonstrated the library\u2019s importance.",
+      "option_c": "The council had already planned to keep the library open.",
+      "option_d": "State law prevented the council from closing the library.",
+      "correct_answer": "B",
+      "explanation": "The passage describes overwhelming community turnout and testimony about the library\u2019s value, followed by a unanimous vote to keep it open. The inference is that the community\u2019s demonstrated support influenced the council. The other options are not supported by the text.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 45,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nUnlike other forms of renewable energy, solar power has the advantage of being completely silent and requiring no moving parts. Homeowners who install solar panels report not only reduced electricity bills but also increased property values. However, solar panels do require a significant upfront investment and perform less efficiently in cloudy regions.\n\nQUESTION\n\nWhat is the primary purpose of this passage?",
+      "option_a": "To argue that solar power is always the best energy choice",
+      "option_b": "To explain the advantages and limitations of solar power",
+      "option_c": "To discourage homeowners from installing solar panels",
+      "option_d": "To compare solar power to all other forms of renewable energy",
+      "correct_answer": "B",
+      "explanation": "The passage presents both advantages (silent, no moving parts, lower bills, higher property value) and limitations (upfront cost, less efficient in clouds). This balanced presentation indicates the purpose is to explain both sides, not advocate or discourage.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 46,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nMonarch butterflies are famous for their annual migration from Canada and the United States to central Mexico, covering up to 3,000 miles. Scientists have long puzzled over how these delicate insects navigate such vast distances. Recent research suggests that monarchs use the position of the sun, combined with an internal biological clock, to maintain their direction. When the clock is disrupted in laboratory experiments, the butterflies lose their sense of direction.\n\nQUESTION\n\nWhich detail from the passage best supports the claim that monarchs use a biological clock for navigation?",
+      "option_a": "Monarchs travel up to 3,000 miles during migration.",
+      "option_b": "Scientists have puzzled over monarch navigation for a long time.",
+      "option_c": "When the biological clock is disrupted in experiments, butterflies lose their sense of direction.",
+      "option_d": "Monarchs migrate from Canada and the United States to Mexico.",
+      "correct_answer": "C",
+      "explanation": "The best evidence for a claim is direct experimental evidence. When researchers disrupted the biological clock and butterflies lost direction, this directly supports the role of the biological clock in navigation. Options A and D are facts about the migration but don\u2019t address the clock specifically.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 47,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nThe film\u2019s director called the remake \u2018a faithful tribute to a masterpiece.\u2019 Critics, however, were less enthusiastic. Most agreed that while the technical execution was impressive, the remake lacked the emotional depth that had made the original so beloved. Audiences seemed divided, with the film earning a modest profit at the box office while receiving mixed reviews online.\n\nQUESTION\n\nWhich best describes the overall tone of this passage?",
+      "option_a": "Enthusiastic and supportive",
+      "option_b": "Balanced and analytical",
+      "option_c": "Strongly critical",
+      "option_d": "Sentimental and nostalgic",
+      "correct_answer": "B",
+      "explanation": "The passage presents multiple perspectives: the director\u2019s positive view, the critics\u2019 mixed reaction, and the audience\u2019s divided response. It neither strongly praises nor harshly condemns the film\u2014it analyzes different viewpoints in a measured, balanced way.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 48,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nThe coastal town had long depended on fishing as its economic foundation. However, as fish populations declined, residents were forced to \u201cpivot\u201d\u2014a word that local business owners began using almost daily. New tourism initiatives, aquaculture projects, and small technology firms began to reshape the town\u2019s identity. The transformation was not painless, but many residents now describe the change as necessary.\n\nQUESTION\n\nAs used in this passage, the word \u201cpivot\u201d most nearly means:",
+      "option_a": "Rotate physically",
+      "option_b": "Make a fundamental change in direction",
+      "option_c": "Lose economic stability",
+      "option_d": "Return to traditional methods",
+      "correct_answer": "B",
+      "explanation": "Context shows the town moved away from fishing toward tourism, aquaculture, and technology\u2014a major shift in economic direction. \u201cPivot\u201d in business language means to make a significant change in strategy or direction. The quotation marks around \u201cpivot\u201d signal it\u2019s being used in this figurative, business sense.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 49,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nSome researchers argue that homework does more harm than good for elementary school students. They point to studies showing that heavy homework loads increase stress and reduce time for creative play. Others disagree, noting that structured practice helps build discipline and reinforces classroom learning. The debate continues, with both sides citing studies that use different measures of academic success.\n\nQUESTION\n\nHow is this passage structured?",
+      "option_a": "A problem is presented, followed by a single solution.",
+      "option_b": "Two opposing viewpoints on an issue are presented.",
+      "option_c": "A hypothesis is presented and then proven.",
+      "option_d": "A historical event is described in chronological order.",
+      "correct_answer": "B",
+      "explanation": "The passage presents one side (\u201csome researchers argue\u201d homework is harmful) and then the opposing side (\u201cothers disagree\u201d it\u2019s beneficial), ending with an unresolved debate. This is a classic two-viewpoints structure.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 50,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nIn the early twentieth century, photographs of children working in mines and factories shocked middle-class Americans. Reformers like Lewis Hine used cameras as instruments of social change, documenting conditions that written reports had failed to make vivid. The photographs did not simply record reality; they framed it, selecting moments that would provoke outrage. Critics argued that such images manipulated emotion rather than informed reason. Yet the laws that eventually protected children from labor exploitation owed much to the moral urgency these photographs helped create.\n\nQUESTION\n\nWhat is the most accurate characterization of the critics\u2019 concern about reform photography?",
+      "option_a": "The photographs were technically inaccurate.",
+      "option_b": "The photographs relied on emotional impact rather than rational argument.",
+      "option_c": "The photographs made child labor appear less severe than it was.",
+      "option_d": "The photographers broke laws to enter the factories.",
+      "correct_answer": "B",
+      "explanation": "The passage states critics argued the images \u201cmanipulated emotion rather than informed reason.\u201d This is a concern about appealing to feelings instead of logical argument. Options A, C, and D are not mentioned in the passage.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 51,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nLanguage shapes thought in subtle but profound ways. The words available in a language influence the concepts its speakers can easily articulate. For instance, some languages have multiple words for types of snow, allowing speakers to make distinctions that are difficult to express in languages with a single snow term. While all humans share the same cognitive capacity, the linguistic tools available to them shape the ease with which certain ideas can be communicated and even conceptualized.\n\nQUESTION\n\nWhich of the following best states the author\u2019s central claim?",
+      "option_a": "All languages are equally expressive.",
+      "option_b": "Languages differ only in vocabulary, not in their effects on thought.",
+      "option_c": "The structure of language can affect how its speakers think and communicate.",
+      "option_d": "Some languages are superior because they have more words.",
+      "correct_answer": "C",
+      "explanation": "The passage argues that language \u201cshapes thought\u201d and that \u201clinguistic tools\u201d influence \u201cthe ease with which certain ideas can be communicated and even conceptualized.\u201d This is precisely stated in option C. Option D is too extreme; the author does not claim any language is superior.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 52,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nThe transition from hunter-gatherer societies to agricultural ones was not, as is sometimes assumed, an unambiguous improvement in human welfare. Archaeological evidence suggests that early farmers were shorter and had more nutritional deficiencies than their predecessors. They also worked longer hours and suffered from more infectious diseases, which spread more easily in dense, settled populations. The adoption of agriculture was driven not by its immediate benefits to individual health but by its capacity to support larger populations.\n\nQUESTION\n\nWhat evidence does the passage provide to support the idea that early agriculture was NOT clearly beneficial to individual health?",
+      "option_a": "Farmers had access to a wider variety of foods.",
+      "option_b": "Early farmers were shorter and had more nutritional deficiencies.",
+      "option_c": "Agricultural societies eventually developed more complex cultures.",
+      "option_d": "Hunter-gatherers often struggled with food scarcity.",
+      "correct_answer": "B",
+      "explanation": "The passage directly states that \u201cearly farmers were shorter and had more nutritional deficiencies.\u201d It also mentions more disease and longer hours. Option B is the direct textual evidence. The other options are either not in the passage or contradict it.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 53,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nMemory is not a filing cabinet where experiences are stored intact and retrieved unchanged. It is more like a river that constantly reshapes its banks\u2014always in motion, influenced by new experiences, emotions, and the act of remembering itself. Each time we recall a memory, we alter it slightly, blending it with our current state of mind. Scientists now understand that what we remember is often as much a construction as a recording.\n\nQUESTION\n\nWhat does the author mean by comparing memory to \u201ca river that constantly reshapes its banks\u201d?",
+      "option_a": "Memories flow in only one direction.",
+      "option_b": "Memories are fixed, like a river\u2019s course.",
+      "option_c": "Memories are constantly changing and being reshaped.",
+      "option_d": "Memories overflow when there are too many of them.",
+      "correct_answer": "C",
+      "explanation": "A river reshapes its banks over time\u2014it is never static. The author uses this metaphor to convey that memories are not fixed recordings but dynamic, changing constructions that are altered each time they are recalled. The passage explicitly states memories are \u201calways in motion.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 54,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nIn his 1968 essay, sociologist Herbert Gans distinguished between \u201ccreator culture\u201d\u2014art produced by trained specialists for elite audiences\u2014and \u201cpopular culture\u201d\u2014content produced for ordinary people. Gans argued that both had genuine value and that critics who dismissed popular culture as inferior were applying the standards of one group to judge another. He challenged the assumption that more educated tastes were inherently more sophisticated or worthy.\n\nQUESTION\n\nWith which statement would Gans most likely agree?",
+      "option_a": "Popular culture should aim to be more like elite culture.",
+      "option_b": "Judging popular culture by elite standards is inherently unfair.",
+      "option_c": "Only professionally trained artists can produce meaningful work.",
+      "option_d": "Elite culture will eventually replace popular culture.",
+      "correct_answer": "B",
+      "explanation": "Gans directly argued that critics were \u201capplying the standards of one group to judge another,\u201d which is the very definition of option B. He challenged the assumption that elite tastes are superior, making options A and C opposite to his view.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 55,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nScientists studying coral reefs discovered that some coral species can survive in warmer waters by hosting heat-resistant algae. This finding generated cautious optimism. However, researchers caution that coral adapted to warmer temperatures may host fewer species of fish and invertebrates suited to those conditions. The discovery is not a solution to climate change\u2019s impact on reefs, but rather evidence that some ecosystems may adapt in limited ways.\n\nQUESTION\n\nWhat is the function of the phrase \u201ccautious optimism\u201d in the passage?",
+      "option_a": "It suggests that scientists are certain reefs will survive climate change.",
+      "option_b": "It introduces a hopeful finding while signaling that significant concerns remain.",
+      "option_c": "It implies that scientists disagree about whether climate change is real.",
+      "option_d": "It dismisses the importance of the coral reef discovery.",
+      "correct_answer": "B",
+      "explanation": "\u201cCautious optimism\u201d is a phrase that combines hope (optimism) with restraint (caution). In the passage, it signals that while the finding is positive (some coral can survive), the author immediately qualifies it with concerns about reduced biodiversity. The phrase thus holds both hope and worry simultaneously.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 56,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "easy",
+      "text": "Which choice correctly completes the sentence?\n\n\"The list of ingredients for the recipe _____ posted on the classroom wall.\"",
+      "option_a": "are", "option_b": "is", "option_c": "were", "option_d": "have been",
+      "correct_answer": "B",
+      "explanation": "The subject is \u201clist,\u201d which is singular\u2014not \u201cingredients.\u201d \u201cOf ingredients\u201d is a prepositional phrase that modifies the subject.\nSingular subject \u201clist\u201d requires singular verb \u201cis.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 57,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "easy",
+      "text": "Where should a comma be placed to make this sentence correct?\n\n\"After the long exhausting hike the students were glad to rest.\"",
+      "option_a": "After \"After\"",
+      "option_b": "After \"hike\"",
+      "option_c": "After \"students\"",
+      "option_d": "No comma is needed",
+      "correct_answer": "B",
+      "explanation": "\u201cAfter the long exhausting hike\u201d is an introductory prepositional phrase. A comma is placed after an introductory phrase before the main clause begins.\nCorrect: \u201cAfter the long exhausting hike, the students were glad to rest.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 58,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "medium",
+      "text": "Which choice correctly completes the sentence?\n\n\"Neither the captain nor the players _____ willing to accept the loss.\"",
+      "option_a": "was", "option_b": "were", "option_c": "is", "option_d": "has been",
+      "correct_answer": "B",
+      "explanation": "With \u201cneither...nor,\u201d the verb agrees with the subject closest to it. The closest subject is \u201cplayers\u201d (plural), so use the plural verb \u201cwere.\u201d\n\nRule: neither X nor Y \u2192 verb agrees with Y (the closer subject).",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 59,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "medium",
+      "text": "Which choice correctly completes the sentence?\n\n\"By the time the guests arrived, the chef _____ the meal.\"",
+      "option_a": "prepared", "option_b": "prepares", "option_c": "had prepared", "option_d": "was preparing",
+      "correct_answer": "C",
+      "explanation": "The past perfect tense (\u201chad prepared\u201d) is used for an action completed before another past action.\n\nThe chef finished the meal BEFORE the guests arrived\u2014so \u201chad prepared\u201d correctly shows the earlier completed action.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 60,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "medium",
+      "text": "Which choice best maintains parallel structure in the sentence?\n\n\"The coach told the players to practice daily, to eat well, and _____.\"",
+      "option_a": "sleeping enough is important",
+      "option_b": "to get enough sleep",
+      "option_c": "they should sleep enough",
+      "option_d": "getting enough sleep",
+      "correct_answer": "B",
+      "explanation": "Parallel structure requires that items in a list use the same grammatical form. The list uses infinitives: \u201cto practice,\u201d \u201cto eat,\u201d and therefore the third item must also be an infinitive: \u201cto get.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 61,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "medium",
+      "text": "Which choice correctly completes the sentence to avoid a dangling modifier?\n\n\"Running through the park, _____.\"",
+      "option_a": "the rain suddenly began",
+      "option_b": "a sudden downpour surprised everyone",
+      "option_c": "I was surprised by a sudden downpour",
+      "option_d": "the downpour started without warning",
+      "correct_answer": "C",
+      "explanation": "A participial phrase (\u201cRunning through the park\u201d) must modify the subject of the main clause. The subject must be the one running through the park\u2014that can only be \u201cI.\u201d Options A, B, and D make rain or a downpour the subject, which cannot run through a park.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 62,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "hard",
+      "text": "Which word best fills the blank to create a grammatically correct sentence?\n\n\"The experiment failed, _____ the scientists did not give up.\"",
+      "option_a": "however",
+      "option_b": "but",
+      "option_c": "therefore",
+      "option_d": "consequently",
+      "correct_answer": "B",
+      "explanation": "A comma followed by a coordinating conjunction (FANBOYS: for, and, nor, but, or, yet, so) correctly joins two independent clauses. \u201cBut\u201d is the coordinating conjunction here.\n\u201cHowever,\u201d \u201ctherefore,\u201d and \u201cconsequently\u201d are conjunctive adverbs\u2014they require a semicolon before them, not just a comma.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 63,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "hard",
+      "text": "Which sentence correctly uses an apostrophe?",
+      "option_a": "The childrens' artwork was displayed in the hallway.",
+      "option_b": "The children's artwork was displayed in the hallway.",
+      "option_c": "The childrens artwork was displayed in the hallway.",
+      "option_d": "The children artwork was displayed in the hallway.",
+      "correct_answer": "B",
+      "explanation": "\u201cChildren\u201d is an irregular plural (not formed with -s). For irregular plurals, add \u2019s to form the possessive.\nCorrect: children\u2019s (not childrens\u2019)\n\nFor regular plurals ending in -s (e.g., students), you add just the apostrophe: students\u2019.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 64,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "hard",
+      "text": "Which choice best combines the following three sentences into one clear sentence?\n\n\"The building was old. The building was still beautiful. The building attracted many visitors.\"",
+      "option_a": "Although old, the building still attracted many visitors because it was beautiful.",
+      "option_b": "The building was old, beautiful and visitors were attracted.",
+      "option_c": "Old but beautiful, the building, many visitors were attracted to it.",
+      "option_d": "Being old and beautiful, visitors were attracted to the building.",
+      "correct_answer": "A",
+      "explanation": "Option A correctly uses a subordinate clause (\u201cAlthough old\u201d) and a causal clause (\u201cbecause it was beautiful\u201d) to logically connect all three ideas in one clear, grammatically correct sentence.\n\nOption B is awkward. Option C has misplaced commas creating confusion. Option D has a dangling modifier\u2014visitors can\u2019t be \u201cbeing old and beautiful.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 65,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "hard",
+      "text": "Which choice creates a complete, grammatically correct sentence?",
+      "option_a": "Although the results were surprising and many scientists questioned them.",
+      "option_b": "The results were surprising; many scientists questioned them.",
+      "option_c": "The results were surprising many scientists questioned them.",
+      "option_d": "Surprising results, many scientists questioned.",
+      "correct_answer": "B",
+      "explanation": "Option A is a fragment\u2014\u201cAlthough\u201d creates a dependent clause that cannot stand alone.\nOption B uses a semicolon to correctly join two independent clauses.\nOption C is a run-on sentence (two independent clauses with no punctuation).\nOption D is awkwardly structured and unclear.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 66,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "easy",
+      "text": "Which word best completes the sentence and conveys that the research was clear and understandable?\n\n\"The scientist\u2019s findings were so _____ that even non-specialists could understand and appreciate the research.\"",
+      "option_a": "obscure", "option_b": "convoluted", "option_c": "accessible", "option_d": "technical",
+      "correct_answer": "C",
+      "explanation": "\u201cAccessible\u201d means easy to understand or approach. The sentence says even non-specialists could understand it, which indicates the research was easy to access/comprehend.\n\u201cObscure\u201d and \u201cconvoluted\u201d mean hard to understand\u2014the opposite. \u201cTechnical\u201d implies specialized language that non-specialists would struggle with.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 67,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "easy",
+      "text": "Which word best completes the sentence?\n\n\"The storm was _____, arriving without warning and leaving destruction in its wake.\"",
+      "option_a": "gradual", "option_b": "predictable", "option_c": "sudden", "option_d": "peaceful",
+      "correct_answer": "C",
+      "explanation": "\u201cArriving without warning\u201d is the key context clue. If the storm came without warning, it was unexpected and abrupt\u2014meaning \u201csudden.\u201d\n\u201cGradual\u201d and \u201cpredictable\u201d are opposite in meaning. \u201cPeaceful\u201d contradicts \u201cdestruction.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 68,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "medium",
+      "text": "Which word best completes the sentence?\n\n\"The diplomat\u2019s remarks were deliberately _____, designed to avoid committing to any clear position on the disputed territory.\"",
+      "option_a": "candid", "option_b": "ambiguous", "option_c": "definitive", "option_d": "forceful",
+      "correct_answer": "B",
+      "explanation": "\u201cAmbiguous\u201d means unclear or open to multiple interpretations. The diplomat was \u201cavoiding a clear position,\u201d which perfectly matches ambiguity.\n\u201cCandid\u201d means honest and direct. \u201cDefinitive\u201d means clear and final\u2014the opposite of what the diplomat was doing. \u201cForceful\u201d means strong and assertive.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 69,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "medium",
+      "text": "Which word best completes the sentence?\n\n\"Despite initial resistance, the town eventually _____ the new zoning laws, realizing they would benefit the community.\"",
+      "option_a": "contested", "option_b": "ignored", "option_c": "embraced", "option_d": "modified",
+      "correct_answer": "C",
+      "explanation": "\u201cDespite initial resistance\u201d signals a change from opposition to acceptance. \u201cEmbraced\u201d means to accept willingly, which fits the shift from resistance to recognition of benefit.\n\u201cContested\u201d and \u201cignored\u201d suggest continued opposition. \u201cModified\u201d means changed, which doesn\u2019t capture acceptance.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 70,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "medium",
+      "text": "Which word best completes the sentence?\n\n\"The professor\u2019s lecture was so _____ that students found themselves struggling to stay awake.\"",
+      "option_a": "captivating", "option_b": "monotonous", "option_c": "challenging", "option_d": "innovative",
+      "correct_answer": "B",
+      "explanation": "\u201cStruggling to stay awake\u201d indicates the lecture was boring. \u201cMonotonous\u201d means dull and lacking variety, which would cause students to struggle to stay awake.\n\u201cCaptivating\u201d means engaging\u2014the opposite. \u201cChallenging\u201d and \u201cinnovative\u201d do not directly cause sleepiness.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 71,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "medium",
+      "text": "Which word best completes the sentence?\n\n\"Her argument was not merely persuasive; it was _____, leaving opponents unable to find a single flaw in her reasoning.\"",
+      "option_a": "flimsy", "option_b": "unconvincing", "option_c": "irrefutable", "option_d": "controversial",
+      "correct_answer": "C",
+      "explanation": "\u201cIrrefutable\u201d means impossible to deny or disprove. The sentence says opponents could not find \u201ca single flaw,\u201d meaning the argument could not be refuted.\n\u201cFlimsy\u201d and \u201cunconvincing\u201d are the opposite. \u201cControversial\u201d means debatable, not that flaws cannot be found.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 72,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "hard",
+      "text": "Which word best completes the sentence?\n\n\"The new policy represented a _____ departure from the organization\u2019s traditional approach\u2014one that many longtime members found disorienting.\"",
+      "option_a": "subtle", "option_b": "minor", "option_c": "radical", "option_d": "temporary",
+      "correct_answer": "C",
+      "explanation": "\u201cDisorienting\u201d suggests the change was significant enough to confuse longtime members. A \u201cradical departure\u201d means a drastic, fundamental change\u2014consistent with disorientation.\n\u201cSubtle\u201d and \u201cminor\u201d changes would not disorient experienced members. \u201cTemporary\u201d refers to duration, not the extent of the change.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 73,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "hard",
+      "text": "Which word best completes the sentence?\n\n\"The researcher\u2019s tone throughout the paper remained scrupulously _____, presenting data without allowing personal opinion to color the interpretation.\"",
+      "option_a": "biased", "option_b": "objective", "option_c": "enthusiastic", "option_d": "speculative",
+      "correct_answer": "B",
+      "explanation": "\u201cObjective\u201d means not influenced by personal feelings. \u201cScrupulously objective\u201d reinforces the idea of extreme care to avoid bias. The phrase \u201cwithout allowing personal opinion\u201d directly defines objectivity.\n\u201cBiased\u201d is the opposite. \u201cSpeculative\u201d means guessing without evidence. \u201cEnthusiastic\u201d implies personal feeling.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 74,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "hard",
+      "text": "Which word best completes the sentence?\n\n\"The artist\u2019s later work showed a marked _____ from the bold, experimental style of her early career, settling instead into predictable and safe compositions.\"",
+      "option_a": "evolution", "option_b": "continuation", "option_c": "divergence", "option_d": "retreat",
+      "correct_answer": "D",
+      "explanation": "\u201cRetreat\u201d means pulling back from something\u2014in this case, pulling back from boldness and experimentation to settle into safety. The phrase \u201csettling into predictable and safe\u201d suggests a withdrawal from risk.\n\u201cContinuation\u201d contradicts the change described. \u201cEvolution\u201d implies positive development. \u201cDivergence\u201d means moving in a different direction but lacks the backward/retreating connotation that \u201cretreat\u201d captures.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 75,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "hard",
+      "text": "Which word best completes the sentence?\n\n\"Far from being _____, the proposal was filled with novel ideas that no one had previously considered.\"",
+      "option_a": "derivative", "option_b": "innovative", "option_c": "complex", "option_d": "persuasive",
+      "correct_answer": "A",
+      "explanation": "\u201cFar from being [X]\u201d means the proposal was NOT [X]. The sentence then confirms the proposal WAS filled with novel ideas. Therefore, [X] must mean \u201cnot novel\u201d or \u201cunoriginal.\u201d\n\u201cDerivative\u201d means copied from or based on something else\u2014the opposite of novel.\nSo: \u201cFar from being derivative [unoriginal], the proposal was filled with novel ideas.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 76,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "easy",
+      "text": "Which transition word best fills the blank to connect the two sentences logically?\n\n\"The town had been preparing for the festival for months. _____, the heavy rain on the day of the event threatened to ruin everything.\"",
+      "option_a": "Therefore", "option_b": "For example", "option_c": "Unfortunately", "option_d": "Similarly",
+      "correct_answer": "C",
+      "explanation": "The second sentence introduces a negative, unexpected problem that contrasts with the long preparation. \u201cUnfortunately\u201d signals a disappointing turn of events.\n\u201cTherefore\u201d implies cause and effect. \u201cFor example\u201d introduces an illustration. \u201cSimilarly\u201d introduces a comparison\u2014none of these fit the contrast here.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 77,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "easy",
+      "text": "A student is writing a paragraph about why dogs make good companions. Which sentence best fits as the concluding sentence after the following?\n\n\"Dogs make excellent companions for many reasons. They are loyal, affectionate, and easy to train.\"",
+      "option_a": "Cats are also popular pets.",
+      "option_b": "Having a dog can significantly improve a person\u2019s quality of life.",
+      "option_c": "Dogs were domesticated thousands of years ago.",
+      "option_d": "Some breeds require more exercise than others.",
+      "correct_answer": "B",
+      "explanation": "A concluding sentence should reinforce the main idea. The paragraph argues dogs are excellent companions, so option B directly supports and summarizes that claim.\nOptions A and C go off-topic. Option D introduces a nuance that doesn\u2019t serve as a conclusion.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 78,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "medium",
+      "text": "A writer wants to add a sentence supporting the claim that \u201cpublic libraries benefit entire communities.\u201d Which addition would best support this claim?",
+      "option_a": "Some people prefer to purchase books rather than borrow them.",
+      "option_b": "Libraries provide free access to books, internet services, and educational programs for people of all income levels.",
+      "option_c": "The first public library in the United States was founded in 1731.",
+      "option_d": "Many library buildings were designed by famous architects.",
+      "correct_answer": "B",
+      "explanation": "Option B directly supports \u201cbenefit entire communities\u201d by showing that libraries serve \u201cpeople of all income levels\u201d with multiple free services.\nOption A contradicts the argument. Option C is historical background, not a direct benefit. Option D is about architecture, unrelated to community benefit.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 79,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "medium",
+      "text": "A student is writing an essay about solutions to climate change. Which sentence would best serve as a topic sentence for the body paragraph on solutions?",
+      "option_a": "Climate change has caused global temperatures to rise significantly over the past century.",
+      "option_b": "Many scientists have dedicated their careers to studying weather patterns.",
+      "option_c": "Several strategies, from renewable energy to carbon capture, offer promising pathways to reducing emissions.",
+      "option_d": "The industrial revolution began in the late 18th century and transformed manufacturing.",
+      "correct_answer": "C",
+      "explanation": "A topic sentence should introduce the main idea of the paragraph. Since the paragraph is about solutions, option C introduces specific solution strategies and signals what the paragraph will discuss.\nOptions A and D describe causes or history. Option B is about scientists, not solutions.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 80,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "medium",
+      "text": "A passage argues that teenagers need more sleep for better health. Which would be the most effective concluding sentence for the passage?",
+      "option_a": "Sleep deprivation is a complex issue with many variables.",
+      "option_b": "Some teenagers go to sleep as late as 2 a.m.",
+      "option_c": "Given the overwhelming evidence, prioritizing adequate sleep should be considered essential to teenage well-being, not optional.",
+      "option_d": "More research on sleep patterns in teenagers is still needed.",
+      "correct_answer": "C",
+      "explanation": "An effective conclusion reinforces the argument and provides a sense of closure. Option C summarizes the evidence and makes a clear, strong claim that aligns with the passage\u2019s purpose.\nOption A is vague and hedging. Option B is a detail, not a conclusion. Option D suggests the argument is unresolved, weakening the passage.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 81,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "hard",
+      "text": "A student wrote: \u201cThe scientist\u2019s discovery was important for the field of medicine.\u201d\n\nThe writer wants to replace \u201cimportant\u201d with a more precise word in a context where the discovery solved a decades-long mystery. Which word is most precise?",
+      "option_a": "pleasant", "option_b": "common", "option_c": "groundbreaking", "option_d": "acceptable",
+      "correct_answer": "C",
+      "explanation": "\u201cGroundbreaking\u201d means innovative and pioneering\u2014highly appropriate for a discovery that solved a decades-long mystery. It conveys both significance and novelty.\n\u201cImportant\u201d is vague. \u201cPleasant\u201d and \u201cacceptable\u201d are far too weak for such a significant discovery.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 82,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "hard",
+      "text": "A student\u2019s notes include:\n1. Air pollution increases asthma rates.\n2. Low-income neighborhoods have higher pollution levels.\n3. Low-income children have higher asthma rates.\n\nWhich sentence best integrates all three points into one cohesive statement?",
+      "option_a": "Air pollution is a serious problem in many cities across the country.",
+      "option_b": "Children in low-income neighborhoods, who are exposed to higher pollution levels, experience disproportionately higher rates of asthma.",
+      "option_c": "Asthma can be caused by many different environmental and genetic factors.",
+      "option_d": "Low-income families often live near factories and industrial areas.",
+      "correct_answer": "B",
+      "explanation": "Option B connects all three points: low-income neighborhoods (point 2), higher pollution exposure (point 2), and higher asthma rates (points 1 and 3). The word \u201cdisproportionately\u201d captures the unequal burden.\nOptions A and C are too vague. Option D addresses location but doesn\u2019t mention asthma or pollution\u2019s health effect.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 83,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "hard",
+      "text": "Original sentence: \u201cThe book was read by many students and they liked it a lot and also learned things.\u201d\n\nWhich revision is clearest and most precise?",
+      "option_a": "Many students read the book; they liked it.",
+      "option_b": "The book, read by many students, was liked by them and educational.",
+      "option_c": "Many students read the book, finding it both engaging and informative.",
+      "option_d": "Students who read the book liked it and it was educational for them.",
+      "correct_answer": "C",
+      "explanation": "Option C is concise, active, and specific: \u201cengaging\u201d replaces \u201cliked it a lot\u201d and \u201cinformative\u201d replaces \u201clearned things\u201d\u2014both more precise.\nOption A loses information (no mention of learning). Option B is awkward. Option D is wordy and informal.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 84,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "easy",
+      "text": "Which sentence is punctuated correctly?",
+      "option_a": "I enjoy hiking, swimming, and cycling.",
+      "option_b": "I enjoy hiking swimming and cycling.",
+      "option_c": "I enjoy, hiking swimming, and cycling.",
+      "option_d": "I enjoy hiking swimming, and, cycling.",
+      "correct_answer": "A",
+      "explanation": "When listing three or more items in a series, commas separate the items. The Oxford (serial) comma before \u201cand\u201d is correct usage.\nOption B has no commas. Options C and D place commas incorrectly.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 85,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "medium",
+      "text": "Which sentence uses a semicolon correctly?",
+      "option_a": "She studied hard; and passed the test.",
+      "option_b": "She studied hard; she passed the test.",
+      "option_c": "She; studied hard and passed the test.",
+      "option_d": "She studied; hard and passed the test.",
+      "correct_answer": "B",
+      "explanation": "A semicolon correctly joins two independent clauses: \u201cShe studied hard\u201d and \u201cshe passed the test.\u201d\n\nOption A incorrectly uses a semicolon before a coordinating conjunction (\u201cand\u201d)\u2014just use a comma there. Options C and D place the semicolon mid-clause, which is incorrect.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 86,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "medium",
+      "text": "Which sentence uses a colon correctly?",
+      "option_a": "The recipe requires: eggs, flour, and sugar.",
+      "option_b": "The recipe: requires eggs, flour, and sugar.",
+      "option_c": "The recipe requires three ingredients: eggs, flour, and sugar.",
+      "option_d": "The recipe requires eggs: flour, and sugar.",
+      "correct_answer": "C",
+      "explanation": "A colon must follow a complete independent clause before introducing a list. \u201cThe recipe requires three ingredients\u201d is a complete clause.\n\nOption A is incorrect because \u201cThe recipe requires\u201d is an incomplete thought\u2014it needs an object, making the colon premature. Option B incorrectly splits the verb phrase.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 87,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "medium",
+      "text": "Consider this sentence: \"The expedition\u2014despite terrible weather\u2014reached the summit.\"\n\nWhat is the function of the dashes in this sentence?",
+      "option_a": "They indicate a pause at the end of a thought.",
+      "option_b": "They set off a parenthetical phrase that interrupts the main clause.",
+      "option_c": "They join two independent clauses.",
+      "option_d": "They introduce a list of items.",
+      "correct_answer": "B",
+      "explanation": "Paired dashes\u2014like parentheses\u2014set off a parenthetical phrase that interrupts but is not essential to the main clause. Remove the phrase and you still have: \u201cThe expedition reached the summit.\u201d\n\nThis is a mid-sentence parenthetical insertion, not a clause joiner or list introducer.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 88,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "hard",
+      "text": "Which sentence is correctly punctuated?",
+      "option_a": "My sister, who lives in Seattle has two dogs.",
+      "option_b": "My sister who lives in Seattle, has two dogs.",
+      "option_c": "My sister, who lives in Seattle, has two dogs.",
+      "option_d": "My sister who lives in Seattle has, two dogs.",
+      "correct_answer": "C",
+      "explanation": "\u201cWho lives in Seattle\u201d is a non-restrictive (non-essential) relative clause\u2014it adds extra information about the sister but is not needed to identify her. Non-restrictive clauses must be set off with commas on BOTH sides.\n\nOptions A and B only use one comma. Option D places a comma incorrectly before \u201ctwo dogs.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 89,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "hard",
+      "text": "Which sentence correctly uses an apostrophe to show possession?",
+      "option_a": "The two companies\u2019 merger was announced yesterday.",
+      "option_b": "The two company\u2019s merger was announced yesterday.",
+      "option_c": "The two companies merger was announced yesterday.",
+      "option_d": "The two companys\u2019 merger was announced yesterday.",
+      "correct_answer": "A",
+      "explanation": "\u201cCompanies\u201d is a regular plural ending in -s. To form the possessive of a plural noun ending in -s, add only an apostrophe after the s.\n\nCorrect: companies\u2019 (not company\u2019s, which would be singular possessive; not companys\u2019, because the plural is \u201ccompanies\u201d not \u201ccompanys\u201d).",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 90,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "hard",
+      "text": "Which choice correctly punctuates the following sentence?\n\n\"The museum director stated that the new wing would open in the spring however she cautioned that construction delays were possible\"",
+      "option_a": "The museum director stated that the new wing would open in the spring; however, she cautioned that construction delays were possible.",
+      "option_b": "The museum director stated that the new wing would open in the spring, however she cautioned that construction delays were possible.",
+      "option_c": "The museum director stated that the new wing would open in the spring however, she cautioned that construction delays were possible.",
+      "option_d": "The museum director stated that the new wing would open in the spring, however, she cautioned that construction delays were possible.",
+      "correct_answer": "A",
+      "explanation": "\u201cHowever\u201d is a conjunctive adverb. When it joins two independent clauses, the correct punctuation is: semicolon + however + comma.\n\nOption B uses only a comma (comma splice). Option C places the comma incorrectly. Option D uses two commas around \u201chowever,\u201d which creates a comma splice on the first half.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

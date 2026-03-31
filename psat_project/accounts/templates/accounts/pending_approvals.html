@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Pending Approvals — PSAT Practice{% endblock %}
+
+{% block content %}
+<div style="max-width:800px;margin:2rem auto;padding:0 1rem">
+  <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:1.5rem;color:var(--primary)">
+    Pending Student Approvals
+  </h1>
+
+  {% if pending %}
+  <div style="background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);overflow:hidden">
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr style="background:var(--primary);color:#fff">
+          <th style="padding:.75rem 1rem;text-align:left">Username</th>
+          <th style="padding:.75rem 1rem;text-align:left">Email</th>
+          <th style="padding:.75rem 1rem;text-align:left">Registered</th>
+          <th style="padding:.75rem 1rem;text-align:center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in pending %}
+        <tr style="border-bottom:1px solid #e5e7eb">
+          <td style="padding:.75rem 1rem;font-weight:600">{{ student.username }}</td>
+          <td style="padding:.75rem 1rem;color:#6b7280">{{ student.email }}</td>
+          <td style="padding:.75rem 1rem;color:#6b7280">{{ student.date_joined|date:"M d, Y" }}</td>
+          <td style="padding:.75rem 1rem;text-align:center">
+            <form method="post" action="{% url 'approve_student' student.pk %}" style="display:inline">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-success" style="padding:.4rem 1.2rem;font-size:.9rem">
+                Approve
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div style="text-align:center;padding:3rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08)">
+    <p style="font-size:1.1rem;color:#6b7280">No pending approvals. All students are approved.</p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

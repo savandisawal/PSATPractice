@@ -1,0 +1,968 @@
+[
+  {
+    "model": "practice.question", "pk": 91,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "easy",
+      "text": "Solve for x: 5x \u2212 3 = 22",
+      "option_a": "3", "option_b": "5", "option_c": "7", "option_d": "9",
+      "correct_answer": "B",
+      "explanation": "Add 3 to both sides: 5x = 25\nDivide by 5: x = 5\n\nCheck: 5(5) \u2212 3 = 25 \u2212 3 = 22 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 92,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "easy",
+      "text": "What is the slope of the line y = 3x \u2212 7?",
+      "option_a": "3", "option_b": "7", "option_c": "\u22127", "option_d": "\u22123",
+      "correct_answer": "A",
+      "explanation": "The equation is in slope-intercept form y = mx + b, where m is the slope and b is the y-intercept.\nHere m = 3 (slope) and b = \u22127 (y-intercept).",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 93,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "easy",
+      "text": "What is the y-intercept of the line y = \u22122x + 5?",
+      "option_a": "\u22122", "option_b": "2", "option_c": "5", "option_d": "\u22125",
+      "correct_answer": "C",
+      "explanation": "In y = mx + b form, b is the y-intercept (the value of y when x = 0).\nHere b = 5, so the y-intercept is 5.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 94,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "If y = 2x \u2212 3 and y = x + 1, what is the value of x?",
+      "option_a": "2", "option_b": "3", "option_c": "4", "option_d": "5",
+      "correct_answer": "C",
+      "explanation": "Set the two expressions equal:\n2x \u2212 3 = x + 1\nSubtract x: x \u2212 3 = 1\nAdd 3: x = 4\n\nCheck: y = 2(4)\u22123 = 5 and y = 4+1 = 5 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 95,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "Solve for y: 3y/4 = 9",
+      "option_a": "6", "option_b": "12", "option_c": "9", "option_d": "16",
+      "correct_answer": "B",
+      "explanation": "Multiply both sides by 4: 3y = 36\nDivide both sides by 3: y = 12\n\nCheck: 3(12)/4 = 36/4 = 9 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 96,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "Solve for x: 2(x + 3) = 4(x \u2212 1)",
+      "option_a": "3", "option_b": "5", "option_c": "7", "option_d": "10",
+      "correct_answer": "B",
+      "explanation": "Expand both sides:\n2x + 6 = 4x \u2212 4\nSubtract 2x: 6 = 2x \u2212 4\nAdd 4: 10 = 2x\nDivide by 2: x = 5",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 97,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "A line has equation y = mx + 2 and passes through the point (3, 8). What is the value of m?",
+      "option_a": "1", "option_b": "3", "option_c": "2", "option_d": "4",
+      "correct_answer": "C",
+      "explanation": "Substitute (3, 8) into y = mx + 2:\n8 = m(3) + 2\n6 = 3m\nm = 2",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 98,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "medium",
+      "text": "If 4a \u2212 3b = 7 and b = 3, what is the value of a?",
+      "option_a": "4", "option_b": "3", "option_c": "5", "option_d": "6",
+      "correct_answer": "A",
+      "explanation": "Substitute b = 3:\n4a \u2212 3(3) = 7\n4a \u2212 9 = 7\n4a = 16\na = 4",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 99,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "The sum of two consecutive odd integers is 56. What is the larger integer?",
+      "option_a": "25", "option_b": "27", "option_c": "29", "option_d": "31",
+      "correct_answer": "C",
+      "explanation": "Let the two consecutive odd integers be n and n + 2.\nn + (n + 2) = 56\n2n + 2 = 56\n2n = 54\nn = 27\n\nThe larger integer = 27 + 2 = 29.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 100,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "If f(x) = 3x + 1 and g(x) = x\u00b2, what is g(f(2))?",
+      "option_a": "7", "option_b": "13", "option_c": "25", "option_d": "49",
+      "correct_answer": "D",
+      "explanation": "First find f(2):\nf(2) = 3(2) + 1 = 7\n\nThen find g(f(2)) = g(7):\ng(7) = 7\u00b2 = 49",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 101,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "Solve for x: x/3 + x/6 = 5",
+      "option_a": "10", "option_b": "6", "option_c": "15", "option_d": "30",
+      "correct_answer": "A",
+      "explanation": "Find a common denominator (6):\n2x/6 + x/6 = 5\n3x/6 = 5\nx/2 = 5\nx = 10\n\nCheck: 10/3 + 10/6 = 20/6 + 10/6 = 30/6 = 5 \u2713",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 102,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "A parabola y = ax\u00b2 + bx + c passes through (0, 5) and (1, 2). Given that c = 5, what is the value of a + b?",
+      "option_a": "3", "option_b": "0", "option_c": "\u22121", "option_d": "\u22123",
+      "correct_answer": "D",
+      "explanation": "From (0, 5): substituting x=0 gives c = 5 \u2713\nFrom (1, 2): a(1)\u00b2 + b(1) + c = 2\na + b + 5 = 2\na + b = \u22123",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 103,
+    "fields": {
+      "subject": 1, "topic": 1, "difficulty": "hard",
+      "text": "If 3^(x+1) = 27, what is the value of x?",
+      "option_a": "1", "option_b": "2", "option_c": "3", "option_d": "4",
+      "correct_answer": "B",
+      "explanation": "Write 27 as a power of 3: 27 = 3\u00b3\nSo: 3^(x+1) = 3\u00b3\nEquate exponents: x + 1 = 3\nx = 2",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 104,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "easy",
+      "text": "A triangle has a base of 10 cm and a height of 6 cm. What is its area?",
+      "option_a": "30 cm\u00b2", "option_b": "60 cm\u00b2", "option_c": "15 cm\u00b2", "option_d": "20 cm\u00b2",
+      "correct_answer": "A",
+      "explanation": "Area of a triangle = (1/2) \u00d7 base \u00d7 height\n= (1/2) \u00d7 10 \u00d7 6\n= 30 cm\u00b2",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 105,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "easy",
+      "text": "Two angles are complementary. One measures 38\u00b0. What is the measure of the other angle?",
+      "option_a": "142\u00b0", "option_b": "48\u00b0", "option_c": "52\u00b0", "option_d": "62\u00b0",
+      "correct_answer": "C",
+      "explanation": "Complementary angles add up to 90\u00b0.\n90\u00b0 \u2212 38\u00b0 = 52\u00b0",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 106,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "medium",
+      "text": "A square has a perimeter of 36 cm. What is its area?",
+      "option_a": "36 cm\u00b2", "option_b": "81 cm\u00b2", "option_c": "72 cm\u00b2", "option_d": "18 cm\u00b2",
+      "correct_answer": "B",
+      "explanation": "Perimeter of square = 4s, so 4s = 36 \u2192 s = 9 cm\nArea = s\u00b2 = 9\u00b2 = 81 cm\u00b2",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 107,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "medium",
+      "text": "A circle has a diameter of 10 cm. What is its circumference? (Use \u03c0.)",
+      "option_a": "10\u03c0 cm", "option_b": "25\u03c0 cm", "option_c": "5\u03c0 cm", "option_d": "100\u03c0 cm",
+      "correct_answer": "A",
+      "explanation": "Circumference = \u03c0d = \u03c0 \u00d7 10 = 10\u03c0 cm\n\u2248 31.4 cm",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 108,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "medium",
+      "text": "In a right triangle, one leg is 8 cm and the hypotenuse is 17 cm. What is the length of the other leg?",
+      "option_a": "9 cm", "option_b": "12 cm", "option_c": "15 cm", "option_d": "16 cm",
+      "correct_answer": "C",
+      "explanation": "Use the Pythagorean theorem: a\u00b2 + b\u00b2 = c\u00b2\n8\u00b2 + b\u00b2 = 17\u00b2\n64 + b\u00b2 = 289\nb\u00b2 = 225\nb = 15 cm\n\nThis is a 8-15-17 Pythagorean triple.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 109,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "hard",
+      "text": "A trapezoid has parallel sides of 8 cm and 12 cm, and a height of 5 cm. What is its area?",
+      "option_a": "40 cm\u00b2", "option_b": "50 cm\u00b2", "option_c": "100 cm\u00b2", "option_d": "60 cm\u00b2",
+      "correct_answer": "B",
+      "explanation": "Area of trapezoid = (1/2)(b\u2081 + b\u2082) \u00d7 h\n= (1/2)(8 + 12) \u00d7 5\n= (1/2)(20)(5)\n= 50 cm\u00b2",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 110,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "hard",
+      "text": "A cylinder has a radius of 4 inches and a height of 3 inches. What is its volume?",
+      "option_a": "12\u03c0 in\u00b3", "option_b": "24\u03c0 in\u00b3", "option_c": "48\u03c0 in\u00b3", "option_d": "64\u03c0 in\u00b3",
+      "correct_answer": "C",
+      "explanation": "Volume of cylinder = \u03c0r\u00b2h\n= \u03c0 \u00d7 4\u00b2 \u00d7 3\n= \u03c0 \u00d7 16 \u00d7 3\n= 48\u03c0 in\u00b3",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 111,
+    "fields": {
+      "subject": 1, "topic": 2, "difficulty": "hard",
+      "text": "In a 30-60-90 triangle, the hypotenuse measures 12 cm. What is the length of the longer leg?",
+      "option_a": "6\u221a3 cm", "option_b": "6 cm", "option_c": "4\u221a3 cm", "option_d": "12\u221a3 cm",
+      "correct_answer": "A",
+      "explanation": "In a 30-60-90 triangle:\n\u2022 Shorter leg = hypotenuse / 2 = 12 / 2 = 6\n\u2022 Longer leg = shorter leg \u00d7 \u221a3 = 6\u221a3\n\nSo the longer leg = 6\u221a3 cm \u2248 10.39 cm",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 112,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "easy",
+      "text": "What is the mode of the following data set: 2, 4, 4, 5, 7, 7, 7, 9?",
+      "option_a": "4", "option_b": "5", "option_c": "7", "option_d": "9",
+      "correct_answer": "C",
+      "explanation": "The mode is the value that appears most frequently.\n2 appears once, 4 twice, 5 once, 7 THREE times, 9 once.\nMode = 7",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 113,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "medium",
+      "text": "What is the range of the data set: 12, 19, 5, 22, 8, 15?",
+      "option_a": "10", "option_b": "17", "option_c": "15", "option_d": "22",
+      "correct_answer": "B",
+      "explanation": "Range = Maximum \u2212 Minimum\n= 22 \u2212 5\n= 17",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 114,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "medium",
+      "text": "In a survey of 150 students, 30% said they preferred science as their favorite subject. How many students preferred science?",
+      "option_a": "45", "option_b": "30", "option_c": "50", "option_d": "120",
+      "correct_answer": "A",
+      "explanation": "30% of 150 = 0.30 \u00d7 150 = 45 students",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 115,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "medium",
+      "text": "A student\u2019s average score on 5 tests is 86. What is the total sum of all 5 scores?",
+      "option_a": "86", "option_b": "172", "option_c": "430", "option_d": "520",
+      "correct_answer": "C",
+      "explanation": "Sum = Mean \u00d7 Number of values\n= 86 \u00d7 5\n= 430",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 116,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "medium",
+      "text": "In a class of 30 students: 18 passed the math exam, 15 passed the science exam, and 8 passed both. How many students passed at least one exam?",
+      "option_a": "23", "option_b": "25", "option_c": "33", "option_d": "30",
+      "correct_answer": "B",
+      "explanation": "Using the inclusion-exclusion principle:\nAt least one = Math + Science \u2212 Both\n= 18 + 15 \u2212 8\n= 25 students",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 117,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "hard",
+      "text": "The mean of 6 values is 30. Five of the values are 28, 35, 22, 31, and 27. What is the sixth value?",
+      "option_a": "30", "option_b": "35", "option_c": "40", "option_d": "37",
+      "correct_answer": "D",
+      "explanation": "Sum of all 6 values = 30 \u00d7 6 = 180\nSum of known 5 values = 28 + 35 + 22 + 31 + 27 = 143\nSixth value = 180 \u2212 143 = 37",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 118,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "hard",
+      "text": "A standard die has faces numbered 1 through 6. What is the probability of rolling a prime number?",
+      "option_a": "1/3", "option_b": "1/2", "option_c": "2/3", "option_d": "1/6",
+      "correct_answer": "B",
+      "explanation": "Prime numbers from 1\u20136: 2, 3, 5 (three primes)\nP(prime) = 3/6 = 1/2\n\nNote: 1 is NOT prime. Primes are: 2, 3, 5.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 119,
+    "fields": {
+      "subject": 1, "topic": 3, "difficulty": "hard",
+      "text": "A test has 25 questions. Each correct answer is worth +3 points, each wrong answer is \u22121 point, and blank answers are 0. A student gets 18 correct, 5 wrong, and 2 blank. What is the student\u2019s score?",
+      "option_a": "49", "option_b": "44", "option_c": "54", "option_d": "46",
+      "correct_answer": "A",
+      "explanation": "Score = (correct \u00d7 3) + (wrong \u00d7 \u22121) + (blank \u00d7 0)\n= (18 \u00d7 3) + (5 \u00d7 \u22121) + (2 \u00d7 0)\n= 54 \u2212 5 + 0\n= 49",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 120,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "easy",
+      "text": "A pizza is cut into 12 equal slices and shared equally among 4 people. How many slices does each person get?",
+      "option_a": "3", "option_b": "4", "option_c": "2", "option_d": "6",
+      "correct_answer": "A",
+      "explanation": "Slices per person = Total slices \u00f7 Number of people\n= 12 \u00f7 4\n= 3 slices",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 121,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "easy",
+      "text": "A car gets 30 miles per gallon. How many gallons are needed to drive 195 miles?",
+      "option_a": "5.5", "option_b": "6.0", "option_c": "6.5", "option_d": "7.0",
+      "correct_answer": "C",
+      "explanation": "Gallons needed = Distance \u00f7 Miles per gallon\n= 195 \u00f7 30\n= 6.5 gallons",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 122,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "medium",
+      "text": "Sarah runs at 6 mph and walks at 3 mph. She covers 15 miles in exactly 3 hours. How many miles did she run?",
+      "option_a": "9", "option_b": "10", "option_c": "12", "option_d": "15",
+      "correct_answer": "C",
+      "explanation": "Let r = miles run. Then (15 \u2212 r) = miles walked.\nTime equation: r/6 + (15\u2212r)/3 = 3\nMultiply by 6: r + 2(15\u2212r) = 18\nr + 30 \u2212 2r = 18\n\u2212r = \u221212\nr = 12 miles",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 123,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "medium",
+      "text": "A store buys an item for $8 and sells it for $12. What is the percent profit?",
+      "option_a": "33%", "option_b": "40%", "option_c": "50%", "option_d": "25%",
+      "correct_answer": "C",
+      "explanation": "Percent profit = (Selling price \u2212 Cost price) / Cost price \u00d7 100\n= (12 \u2212 8) / 8 \u00d7 100\n= 4/8 \u00d7 100\n= 50%",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 124,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "medium",
+      "text": "Three friends split a restaurant bill of $87 equally. Each also leaves a $4 tip separately. How much does each person pay in total?",
+      "option_a": "$33", "option_b": "$29", "option_c": "$31", "option_d": "$35",
+      "correct_answer": "A",
+      "explanation": "Each person\u2019s share of bill = $87 \u00f7 3 = $29\nEach person\u2019s total = $29 + $4 tip = $33",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 125,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "hard",
+      "text": "Pipe A can fill a pool in 3 hours. Pipe B can drain the full pool in 5 hours. If both pipes are open at the same time when the pool is empty, how long will it take to fill the pool?",
+      "option_a": "4 hours", "option_b": "7 hours", "option_c": "7.5 hours", "option_d": "15 hours",
+      "correct_answer": "C",
+      "explanation": "Net fill rate = Fill rate \u2212 Drain rate = 1/3 \u2212 1/5\n= 5/15 \u2212 3/15 = 2/15 per hour\n\nTime to fill = 1 \u00f7 (2/15) = 15/2 = 7.5 hours",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 126,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "hard",
+      "text": "A car rental costs $25 per day plus $0.15 per mile. If someone rents the car for 3 days and drives 200 miles, what is the total cost?",
+      "option_a": "$105", "option_b": "$100", "option_c": "$120", "option_d": "$75",
+      "correct_answer": "A",
+      "explanation": "Daily cost = $25 \u00d7 3 = $75\nMileage cost = $0.15 \u00d7 200 = $30\nTotal = $75 + $30 = $105",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 127,
+    "fields": {
+      "subject": 1, "topic": 4, "difficulty": "hard",
+      "text": "Two numbers sum to 45. The larger number is 3 more than twice the smaller. What is the larger number?",
+      "option_a": "14", "option_b": "28", "option_c": "27", "option_d": "31",
+      "correct_answer": "D",
+      "explanation": "Let s = smaller number. Larger = 2s + 3.\ns + (2s + 3) = 45\n3s + 3 = 45\n3s = 42\ns = 14\n\nLarger = 2(14) + 3 = 31",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 128,
+    "fields": {
+      "subject": 1, "topic": 9, "difficulty": "medium",
+      "text": "Which of the following is equivalent to (x + 3)\u00b2?",
+      "option_a": "x\u00b2 + 9", "option_b": "x\u00b2 + 6x + 9", "option_c": "x\u00b2 + 3x + 9", "option_d": "x\u00b2 + 9x + 9",
+      "correct_answer": "B",
+      "explanation": "Use FOIL: (x + 3)(x + 3)\nFirst: x \u00d7 x = x\u00b2\nOuter: x \u00d7 3 = 3x\nInner: 3 \u00d7 x = 3x\nLast: 3 \u00d7 3 = 9\n\nCombine: x\u00b2 + 3x + 3x + 9 = x\u00b2 + 6x + 9",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 129,
+    "fields": {
+      "subject": 1, "topic": 9, "difficulty": "hard",
+      "text": "Simplify: (x\u00b3 \u00d7 x\u2074) \u00f7 x\u00b2",
+      "option_a": "x\u2079", "option_b": "x\u2077", "option_c": "x\u2075", "option_d": "x\u00b2\u2074",
+      "correct_answer": "C",
+      "explanation": "Use the rules of exponents:\nx\u00b3 \u00d7 x\u2074 = x^(3+4) = x\u2077\n\nThen divide: x\u2077 \u00f7 x\u00b2 = x^(7\u22122) = x\u2075",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 130,
+    "fields": {
+      "subject": 1, "topic": 9, "difficulty": "hard",
+      "text": "What are the coordinates of the vertex of the parabola y = x\u00b2 \u2212 6x + 8?",
+      "option_a": "(3, \u22121)", "option_b": "(3, 1)", "option_c": "(\u22123, \u22121)", "option_d": "(6, 0)",
+      "correct_answer": "A",
+      "explanation": "The x-coordinate of the vertex: x = \u2212b/(2a) = \u2212(\u22126)/(2\u00d71) = 3\n\nSubstitute x = 3 to find y:\ny = 3\u00b2 \u2212 6(3) + 8 = 9 \u2212 18 + 8 = \u22121\n\nVertex = (3, \u22121)",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 131,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "easy",
+      "text": "PASSAGE\n\nSunflowers are known for their ability to track the sun across the sky, a behavior called heliotropism. Young sunflowers follow the sun from east to west during the day and reset overnight. This movement is driven by uneven growth on opposite sides of the stem. Once a sunflower reaches maturity, it typically stops tracking and faces east permanently.\n\nQUESTION\n\nAccording to the passage, what causes young sunflowers to track the sun?",
+      "option_a": "A chemical released at sunrise",
+      "option_b": "Uneven growth on opposite sides of the stem",
+      "option_c": "Wind patterns during the day",
+      "option_d": "Roots that orient toward sunlight",
+      "correct_answer": "B",
+      "explanation": "The passage directly states: \u201cThis movement is driven by uneven growth on opposite sides of the stem.\u201d This is a detail question\u2014look for exact wording in the passage.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 132,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "easy",
+      "text": "PASSAGE\n\nThe bald eagle, once endangered due to hunting and pesticide use, was removed from the U.S. Endangered Species List in 2007. Conservation efforts\u2014including banning the pesticide DDT in 1972 and legal protections against hunting\u2014helped the population recover from fewer than 500 nesting pairs in the 1960s to over 9,000 pairs today.\n\nQUESTION\n\nAccording to the passage, which actions most directly helped the bald eagle recover?",
+      "option_a": "Establishing national parks",
+      "option_b": "Banning DDT and protecting eagles from hunting",
+      "option_c": "Creating breeding programs in zoos",
+      "option_d": "Limiting commercial fishing near eagle habitats",
+      "correct_answer": "B",
+      "explanation": "The passage explicitly lists \u201cbanning the pesticide DDT in 1972 and legal protections against hunting\u201d as the conservation efforts that helped recovery. Options A, C, and D are not mentioned.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 133,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nFor centuries, the night sky was as familiar to ordinary people as their own neighborhoods. Farmers used stars to time plantings, sailors navigated by constellations, and storytellers filled the heavens with mythology. Today, light pollution from cities has erased this shared inheritance. More than one-third of humanity\u2014including 99% of the United States population\u2014cannot see the Milky Way from where they live.\n\nQUESTION\n\nWhat can be inferred from the passage about people\u2019s relationship with the night sky today compared to the past?",
+      "option_a": "Modern people are more knowledgeable about astronomy than their ancestors.",
+      "option_b": "People today have largely lost the intimate connection with the night sky that past generations had.",
+      "option_c": "Light pollution has had no effect on scientific astronomy.",
+      "option_d": "Farmers today still rely on stars to time their plantings.",
+      "correct_answer": "B",
+      "explanation": "The passage describes how the night sky was once a shared, practical resource (farming, navigation, storytelling) but light pollution has \u201cerased this shared inheritance.\u201d The phrase \u201cshared inheritance\u201d being \u201cerased\u201d supports the inference that this connection is largely lost.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 134,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nRecent studies have challenged the long-held view that multitasking improves productivity. Researchers found that people who frequently switch between tasks take longer to complete each one than those who focus on a single task. The brain is not designed to give full attention to two complex activities simultaneously; what we call \u201cmultitasking\u201d is actually rapid task-switching, which uses additional cognitive resources.\n\nQUESTION\n\nWhich detail best supports the claim that multitasking reduces efficiency?",
+      "option_a": "The brain is capable of rapid task-switching.",
+      "option_b": "People who switch tasks frequently take longer to complete each task.",
+      "option_c": "Multitasking has been studied by researchers for many years.",
+      "option_d": "Cognitive resources are used in most mental activities.",
+      "correct_answer": "B",
+      "explanation": "The best evidence for a claim is specific, direct evidence. Option B directly supports reduced efficiency: switching tasks causes tasks to take LONGER. This is a measurable outcome.\nOptions A and D don\u2019t show reduced efficiency. Option C is about research history, not productivity.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 135,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nIn 1854, London physician John Snow mapped the locations of cholera cases during an outbreak and traced them to a single contaminated water pump on Broad Street. By removing the pump handle, he halted the outbreak. Snow\u2019s work is considered a founding moment of modern epidemiology, demonstrating that careful data collection\u2014not just medical intuition\u2014can identify the source of disease.\n\nQUESTION\n\nWhat is the primary purpose of this passage?",
+      "option_a": "To describe the symptoms of cholera",
+      "option_b": "To explain how Snow\u2019s data-driven approach helped end an outbreak and shaped modern medicine",
+      "option_c": "To argue that water quality is the most important public health concern",
+      "option_d": "To compare 19th-century medicine to modern practices",
+      "correct_answer": "B",
+      "explanation": "The passage describes Snow\u2019s method (mapping cases, identifying the pump, removing the handle) and its significance (founding moment of epidemiology). The purpose is to explain both what happened and why it matters\u2014the hallmark of option B.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 136,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "medium",
+      "text": "PASSAGE\n\nOctopuses are remarkable problem-solvers. In laboratory settings, they have opened childproof bottles, navigated mazes, and even recognized individual human faces. Their intelligence is distributed differently than in most animals: about two-thirds of an octopus\u2019s neurons are located in its arms rather than its brain, allowing each arm to process information and act semi-independently.\n\nQUESTION\n\nAs used in the passage, the word \u201cdistributed\u201d most nearly means:",
+      "option_a": "Delivered to many locations",
+      "option_b": "Spread across different parts",
+      "option_c": "Reduced in effectiveness",
+      "option_d": "Organized in a pattern",
+      "correct_answer": "B",
+      "explanation": "Context: octopus intelligence is \u201cdistributed differently\u201d because neurons are spread across arms, not concentrated in the brain. \u201cDistributed\u201d here means spread out across different parts of the body.\nOption A (\u201cdelivered\u201d) implies active sending. Option C is a distortion. Option D focuses on arrangement, not location.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 137,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nThe concept of \u201cwilderness\u201d as untouched nature is largely a cultural construction. When European settlers arrived in the Americas, they described landscapes as wild and uninhabited\u2014yet these were managed by indigenous peoples through controlled burning, selective harvesting, and deliberate planting. What settlers perceived as pristine wilderness was, in many cases, a sophisticated land management system whose stewards they had not recognized as such.\n\nQUESTION\n\nWhich of the following best describes the passage\u2019s central argument?",
+      "option_a": "Indigenous peoples failed to develop effective agricultural systems.",
+      "option_b": "The idea of untouched wilderness ignores evidence of deliberate land management by indigenous peoples.",
+      "option_c": "European settlers accurately described the American landscape as uninhabited.",
+      "option_d": "Wilderness preservation is the most effective approach to environmental management.",
+      "correct_answer": "B",
+      "explanation": "The passage directly argues that \u201cwilderness\u201d as untouched is a \u201ccultural construction.\u201d It provides evidence (controlled burning, selective harvesting) that indigenous peoples actively managed the land. The central argument challenges the untouched-wilderness concept.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 138,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nThe assumption that ancient people were intellectually inferior to modern humans is not supported by evidence. The brains of Homo sapiens have not changed significantly in roughly 300,000 years. Ancient people built complex structures, developed sophisticated trade networks, and created art of remarkable subtlety. What has changed is not human intelligence but accumulated knowledge\u2014the sum of discoveries passed down across generations.\n\nQUESTION\n\nWhat is the central claim of this passage?",
+      "option_a": "Ancient humans were more intelligent than modern humans.",
+      "option_b": "The brain has evolved significantly over the past 300,000 years.",
+      "option_c": "Human intelligence has remained constant while accumulated knowledge has grown.",
+      "option_d": "Art is the best measure of human intellectual capacity.",
+      "correct_answer": "C",
+      "explanation": "The passage argues that brains haven\u2019t changed (\u201cintelligence remained constant\u201d) but what HAS changed is \u201caccumulated knowledge.\u201d Option C directly captures both parts of this argument.\nOption A is not argued (the passage doesn\u2019t claim ancient people were smarter). Option B contradicts the passage.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 139,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nTo call a city \u201calive\u201d may seem like mere metaphor, but urban planners and ecologists have found genuine parallels between cities and living organisms. Like organisms, cities consume energy, excrete waste, grow, reproduce (through founding new cities), and eventually decline. Some researchers apply metabolic equations derived from biology to predict urban growth patterns with surprising accuracy.\n\nQUESTION\n\nWhat does the author mean by saying the comparison between cities and organisms is \u201cnot just metaphor\u201d?",
+      "option_a": "Cities are literally biological organisms.",
+      "option_b": "The comparison is scientifically useful and mathematically grounded, not just a figure of speech.",
+      "option_c": "All metaphors are scientifically meaningful.",
+      "option_d": "Urban planners have completely replaced biological methods with urban models.",
+      "correct_answer": "B",
+      "explanation": "The author acknowledges the phrase \u201calive\u201d \u201cmay seem like mere metaphor\u201d but then provides evidence that the comparison has genuine scientific validity: researchers use metabolic equations to predict urban growth.\u201cNot just metaphor\u201d = there is real scientific utility beyond figurative language.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 140,
+    "fields": {
+      "subject": 2, "topic": 5, "difficulty": "hard",
+      "text": "PASSAGE\n\nScientists once believed that coral reefs could not survive in cold, deep water. The discovery of cold-water corals at depths of hundreds of meters has overturned this assumption. Unlike their warm-water relatives, cold-water corals do not rely on photosynthetic algae and can thrive without sunlight. These largely unexplored ecosystems may harbor species unknown to science.\n\nQUESTION\n\nWhat is the function of the phrase \u201coverturned this assumption\u201d in the passage?",
+      "option_a": "It suggests that scientists are generally unreliable.",
+      "option_b": "It signals a significant revision of previously held scientific knowledge.",
+      "option_c": "It implies that cold-water corals are more important than warm-water ones.",
+      "option_d": "It introduces a comparison between different types of coral reefs.",
+      "correct_answer": "B",
+      "explanation": "\u201cOverturned this assumption\u201d follows the statement of what scientists once believed. Its function is to signal that new evidence has replaced an old belief\u2014a significant revision of scientific knowledge.\nThis is a structural/rhetorical function question: ask what role the phrase plays in the passage\u2019s argument.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 141,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "easy",
+      "text": "Which choice correctly completes the sentence?\n\n\"The committee _____ reached a unanimous decision after three hours of debate.\"",
+      "option_a": "have", "option_b": "has", "option_c": "were", "option_d": "are",
+      "correct_answer": "B",
+      "explanation": "Collective nouns like \u201ccommittee,\u201d \u201cteam,\u201d \u201ccrew,\u201d and \u201cjury\u201d are typically treated as singular in American English.\nSingular subject \u201ccommittee\u201d takes the singular verb \u201chas.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 142,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "easy",
+      "text": "Which choice correctly completes the sentence?\n\n\"Neither Marcus nor his teammates remembered to bring _____ jerseys.\"",
+      "option_a": "his", "option_b": "their", "option_c": "its", "option_d": "our",
+      "correct_answer": "B",
+      "explanation": "With \u201cneither...nor,\u201d the pronoun agrees with the noun closest to it. The closest noun is \u201cteammates\u201d (plural), so use \u201ctheir.\u201d\n\nAlso: jerseys belong to both Marcus and the teammates, so \u201ctheir\u201d is logically correct.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 143,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "medium",
+      "text": "Which choice correctly completes the sentence?\n\n\"By next June, she _____ her position as director for exactly three years.\"",
+      "option_a": "will have held", "option_b": "holds", "option_c": "held", "option_d": "has held",
+      "correct_answer": "A",
+      "explanation": "The future perfect tense (\u201cwill have held\u201d) is used for an action that will be completed by a specific point in the future.\n\u201cBy next June\u201d is the future reference point, so we need the future perfect: \u201cwill have held.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 144,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "medium",
+      "text": "Which choice correctly completes the sentence?\n\n\"The scientist, as well as several colleagues, _____ awarded a prestigious grant last month.\"",
+      "option_a": "were", "option_b": "was", "option_c": "are", "option_d": "have been",
+      "correct_answer": "B",
+      "explanation": "Phrases like \u201cas well as,\u201d \u201ctogether with,\u201d and \u201calong with\u201d are parenthetical\u2014they do NOT change the subject. The true subject is \u201cthe scientist\u201d (singular).\nSingular subject \u2192 singular verb \u201cwas.\u201d",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 145,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "medium",
+      "text": "Which choice best maintains parallel structure?\n\n\"The new employee was praised for her punctuality, her creativity, and _____.\"",
+      "option_a": "she worked hard",
+      "option_b": "because she was dedicated",
+      "option_c": "her dedication",
+      "option_d": "being dedicated to work",
+      "correct_answer": "C",
+      "explanation": "The list uses possessive noun phrases: \u201cher punctuality,\u201d \u201cher creativity,\u201d so the third item must match: \u201cher dedication.\u201d\n\nParallel structure means all items in a list use the same grammatical form.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 146,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "hard",
+      "text": "Which choice correctly completes the sentence to avoid a comma splice?\n\n\"She was an excellent speaker, _____ she often avoided public appearances.\"",
+      "option_a": "and", "option_b": "so", "option_c": "yet", "option_d": "for",
+      "correct_answer": "C",
+      "explanation": "A comma followed by a coordinating conjunction (FANBOYS) correctly joins two independent clauses.\n\u201cYet\u201d shows contrast\u2014despite being an excellent speaker, she avoided appearances. This logical contrast fits perfectly.\n\u201cAnd\u201d and \u201cso\u201d don\u2019t convey the contrast. \u201cFor\u201d means \u201cbecause\u201d\u2014wrong logic here.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 147,
+    "fields": {
+      "subject": 2, "topic": 6, "difficulty": "hard",
+      "text": "Which choice avoids the dangling modifier in the following sentence?\n\n\"Having finished the assignment early, _____.\"",
+      "option_a": "the teacher gave extra credit",
+      "option_b": "the classroom felt quiet and calm",
+      "option_c": "the student had time to review her work",
+      "option_d": "extra credit was given by the teacher",
+      "correct_answer": "C",
+      "explanation": "A participial phrase (\u201cHaving finished the assignment early\u201d) must describe the subject of the main clause. Only a person can \u201cfinish an assignment.\u201d\n\nOption C makes \u201cthe student\u201d the subject\u2014the student finished early. Options A, B, and D make non-humans the subject, creating a dangling modifier.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 148,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "easy",
+      "text": "Which word best completes the sentence?\n\n\"The detective examined each clue with _____ attention, refusing to overlook even the smallest detail.\"",
+      "option_a": "brief", "option_b": "careless", "option_c": "meticulous", "option_d": "occasional",
+      "correct_answer": "C",
+      "explanation": "\u201cMeticulous\u201d means extremely careful and precise. \u201cRefusing to overlook even the smallest detail\u201d directly defines meticulous attention.\n\u201cBrief\u201d and \u201coccasional\u201d suggest limited attention. \u201cCareless\u201d is the opposite.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 149,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "easy",
+      "text": "Which word best completes the sentence?\n\n\"The speaker\u2019s presentation was so _____ that the audience applauded before she had even finished.\"",
+      "option_a": "tedious", "option_b": "compelling", "option_c": "confusing", "option_d": "lengthy",
+      "correct_answer": "B",
+      "explanation": "\u201cCompelling\u201d means powerfully engaging and interesting. Applauding before a presentation ends is a sign of strong engagement.\n\u201cTedious\u201d (boring) and \u201cconfusing\u201d would not prompt early applause. \u201cLengthy\u201d describes duration, not quality.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 150,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "medium",
+      "text": "Which word best completes the sentence?\n\n\"The committee was _____ in its decision, refusing to budge despite significant pressure from both sides.\"",
+      "option_a": "flexible", "option_b": "unwavering", "option_c": "reluctant", "option_d": "divided",
+      "correct_answer": "B",
+      "explanation": "\u201cUnwavering\u201d means not changing or hesitating\u2014staying firm. \u201cRefusing to budge despite pressure\u201d directly describes unwavering behavior.\n\u201cFlexible\u201d is the opposite. \u201cReluctant\u201d means hesitant, not firm. \u201cDivided\u201d means split, which contradicts acting as one.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 151,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "medium",
+      "text": "Which word best completes the sentence?\n\n\"The tropical storm gradually _____ as it moved inland, losing the oceanic moisture that had fueled it.\"",
+      "option_a": "intensified", "option_b": "accelerated", "option_c": "dissipated", "option_d": "persisted",
+      "correct_answer": "C",
+      "explanation": "\u201cDissipated\u201d means gradually weakened and dispersed. \u201cLosing moisture\u201d and \u201cmoving inland\u201d indicate the storm was weakening\u2014dissipating.\n\u201cIntensified\u201d and \u201caccelerated\u201d mean getting stronger/faster, the opposite. \u201cPersisted\u201d means continued without change.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 152,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "medium",
+      "text": "Which word best completes the sentence?\n\n\"The professor\u2019s explanation was remarkably _____, breaking down complex ideas into terms even first-year students could grasp.\"",
+      "option_a": "abstruse", "option_b": "lucid", "option_c": "technical", "option_d": "convoluted",
+      "correct_answer": "B",
+      "explanation": "\u201cLucid\u201d means clear and easy to understand. \u201cEven first-year students could grasp\u201d confirms the explanation was clear.\n\u201cAbstruse\u201d and \u201cconvoluted\u201d mean difficult to understand. \u201cTechnical\u201d implies jargon that would be hard for first-years.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 153,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "hard",
+      "text": "Which word best completes the sentence?\n\n\"The commission\u2019s report was _____, avoiding definitive conclusions and instead offering a range of possible interpretations.\"",
+      "option_a": "incisive", "option_b": "equivocal", "option_c": "definitive", "option_d": "prescriptive",
+      "correct_answer": "B",
+      "explanation": "\u201cEquivocal\u201d means deliberately ambiguous or unclear, open to multiple interpretations. \u201cAvoiding definitive conclusions\u201d and \u201coffering a range of interpretations\u201d directly describe equivocal language.\n\u201cIncisive\u201d means sharply clear. \u201cDefinitive\u201d means conclusive. \u201cPrescriptive\u201d means giving directions.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 154,
+    "fields": {
+      "subject": 2, "topic": 7, "difficulty": "hard",
+      "text": "Which word best completes the sentence?\n\n\"Unlike his predecessor, whose policies had been _____ and slow to change, the new director implemented sweeping reforms within his first year.\"",
+      "option_a": "progressive", "option_b": "innovative", "option_c": "entrenched", "option_d": "adaptive",
+      "correct_answer": "C",
+      "explanation": "\u201cEntrenched\u201d means firmly established and resistant to change. The contrast with \u201csweeping reforms\u201d and \u201cslow to change\u201d confirms the predecessor\u2019s policies were deeply fixed and resistant.\n\u201cProgressive,\u201d \u201cinnovative,\u201d and \u201cadaptive\u201d all describe openness to change\u2014the opposite of the predecessor.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 155,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "easy",
+      "text": "Which transition word best fills the blank?\n\n\"Zara studied for the test every day for two weeks. _____, she passed with a perfect score.\"",
+      "option_a": "However", "option_b": "On the other hand", "option_c": "As a result", "option_d": "In contrast",
+      "correct_answer": "C",
+      "explanation": "\u201cAs a result\u201d signals cause and effect: studying every day caused her to pass with a perfect score.\n\u201cHowever\u201d and \u201cIn contrast\u201d signal unexpected contrast. \u201cOn the other hand\u201d introduces an opposing viewpoint.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 156,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "medium",
+      "text": "A writer wants to add a sentence supporting the claim that \u201cvolunteering benefits volunteers as much as those they help.\u201d Which addition best supports this claim?",
+      "option_a": "Many organizations depend on volunteers to function.",
+      "option_b": "Research shows that volunteers report higher levels of happiness and life satisfaction than non-volunteers.",
+      "option_c": "Volunteering has been practiced throughout human history.",
+      "option_d": "Some volunteers dedicate more than 20 hours per week to their work.",
+      "correct_answer": "B",
+      "explanation": "Option B directly supports the claim that volunteers themselves benefit: research shows they report higher happiness and life satisfaction.\nOption A shows organizations benefit, not volunteers. Options C and D are background facts that don\u2019t address benefits to volunteers.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 157,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "medium",
+      "text": "A student is writing an essay about the effects of social media on teenagers. Which sentence would best serve as a topic sentence for a paragraph about negative effects?",
+      "option_a": "Social media platforms were first launched in the early 2000s.",
+      "option_b": "Many teenagers spend several hours daily on social media.",
+      "option_c": "Despite its benefits, social media has been linked to increased anxiety and reduced face-to-face communication skills in teenagers.",
+      "option_d": "Teenagers have always found new ways to connect with their peers.",
+      "correct_answer": "C",
+      "explanation": "A topic sentence introduces the main idea of a paragraph. Since this paragraph covers NEGATIVE effects, option C is ideal: it acknowledges benefits (showing balance) and then introduces specific negative effects (anxiety, reduced communication skills) to be discussed.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 158,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "medium",
+      "text": "A passage states: \u201cMany students benefit from working in groups.\u201d The writer wants to replace \u201cbenefit from\u201d with a more specific phrase. In a context where students understand material better by working together, which replacement is most precise?",
+      "option_a": "enjoy",
+      "option_b": "think about",
+      "option_c": "retain and understand material better through",
+      "option_d": "get something out of",
+      "correct_answer": "C",
+      "explanation": "Option C is precise and specific: it names exactly HOW students benefit (retaining and understanding material better). This replaces the vague \u201cbenefit from\u201d with language that directly states the academic outcome.\nOptions A, B, and D are vague or informal.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 159,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "hard",
+      "text": "A student\u2019s notes include:\n1. Bees pollinate approximately one-third of the global food supply.\n2. Bee populations have declined by 30% since 2006.\n3. Pesticides are identified as a major cause of bee population decline.\n\nWhich sentence best synthesizes all three points into one cohesive statement?",
+      "option_a": "Bee populations are declining for unknown reasons.",
+      "option_b": "Bees are important to the environment in many ways.",
+      "option_c": "Pesticide-driven declines in bee populations threaten to undermine the pollination of a significant portion of the global food supply.",
+      "option_d": "The government should regulate pesticide use more carefully.",
+      "correct_answer": "C",
+      "explanation": "Option C integrates all three notes: pesticides (note 3) \u2192 declining bees (note 2) \u2192 threatening food supply (note 1). It creates a logical causal chain from all data points.\nOption A contradicts note 3. Option B is too vague. Option D is a recommendation not supported by synthesis.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 160,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "hard",
+      "text": "Original sentence: \u201cIt is important that students who want to succeed should try to make sure that they study hard and that they get enough sleep.\u201d\n\nWhich revision is clearest and most concise?",
+      "option_a": "Students should study hard and get enough sleep to succeed.",
+      "option_b": "For success, studying hard is important, and so is sleep.",
+      "option_c": "Students who want success need to make sure studying and sleeping are done.",
+      "option_d": "Success requires hard study and sufficient sleep for students who want it.",
+      "correct_answer": "A",
+      "explanation": "Option A eliminates wordiness (removes \u201cit is important that,\u201d \u201cshould try to make sure,\u201d repeated \u201cthat they\u201d) while preserving all meaning in a direct, clear sentence.\nOptions B and D are somewhat awkward. Option C uses passive voice awkwardly.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 161,
+    "fields": {
+      "subject": 2, "topic": 8, "difficulty": "hard",
+      "text": "A passage describes three types of renewable energy: solar, wind, and hydroelectric. Which sentence would be most effective as a concluding sentence for the passage?",
+      "option_a": "Solar panels were first developed in the 1950s.",
+      "option_b": "Wind turbines can be placed offshore or on land.",
+      "option_c": "Together, solar, wind, and hydroelectric power represent a promising path toward reducing dependence on fossil fuels.",
+      "option_d": "Hydroelectric dams can sometimes negatively affect local river ecosystems.",
+      "correct_answer": "C",
+      "explanation": "A concluding sentence should unify the passage\u2019s ideas and provide closure. Option C references all three topics discussed (solar, wind, hydroelectric) and states their collective significance\u2014reducing fossil fuel dependence.\nOptions A, B, and D introduce specific details that belong in the body, not a conclusion.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "practice.question", "pk": 162,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "easy",
+      "text": "Which sentence is correctly punctuated?",
+      "option_a": "Before leaving, the students packed their bags, and notebooks.",
+      "option_b": "Before leaving the students packed their bags and notebooks.",
+      "option_c": "Before leaving, the students packed their bags and notebooks.",
+      "option_d": "Before, leaving the students packed their bags and notebooks.",
+      "correct_answer": "C",
+      "explanation": "\u201cBefore leaving\u201d is an introductory participial phrase. A comma is placed after it before the main clause.\n\nOption A incorrectly places a comma before \u201cand\u201d, separating \u201cbags\u201d from \u201cnotebooks\u201d (a two-item list doesn\u2019t need a comma). Option B has no introductory comma. Option D places the comma incorrectly.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 163,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "medium",
+      "text": "Which sentence uses a semicolon correctly?",
+      "option_a": "He was nervous; but he performed well.",
+      "option_b": "He was nervous; however, he performed well.",
+      "option_c": "He was; nervous and performed well.",
+      "option_d": "He; was nervous but performed well.",
+      "correct_answer": "B",
+      "explanation": "A semicolon before a conjunctive adverb (\u201chowever\u201d) followed by a comma is correct.\nOption A uses a semicolon before a coordinating conjunction (\u201cbut\u201d)\u2014just use a comma there.\nOptions C and D place semicolons mid-clause, which is incorrect.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 164,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "medium",
+      "text": "Which sentence correctly uses an apostrophe to show possession?",
+      "option_a": "The mens' locker room was renovated last summer.",
+      "option_b": "The men's locker room was renovated last summer.",
+      "option_c": "The mens locker room was renovated last summer.",
+      "option_d": "The men locker's room was renovated last summer.",
+      "correct_answer": "B",
+      "explanation": "\u201cMen\u201d is an irregular plural (not formed by adding -s). For irregular plurals, add \u2019s to form the possessive.\nCorrect: men\u2019s (not mens\u2019, which would imply the plural is \u201cmens\u201d)\n\nContrast: for regular plurals ending in -s (students), just add \u2019 after the s (students\u2019).",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 165,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "medium",
+      "text": "Which choice correctly punctuates the sentence?\n\n\"The report which was published last Monday has already been cited by three researchers.\"",
+      "option_a": "The report, which was published last Monday, has already been cited by three researchers.",
+      "option_b": "The report which was published last Monday, has already been cited by three researchers.",
+      "option_c": "The report, which was published last Monday has already been cited by three researchers.",
+      "option_d": "The report which was published last Monday has already been cited by three researchers.",
+      "correct_answer": "A",
+      "explanation": "\u201cWhich was published last Monday\u201d is a non-restrictive (non-essential) clause\u2014it adds extra information about the report but is not needed to identify it. Non-restrictive clauses require commas on BOTH sides.\n\nOptions B and C each have only one comma. Option D has no commas.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 166,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "hard",
+      "text": "Which sentence correctly uses paired dashes?",
+      "option_a": "The winner\u2014was announced after a long delay.",
+      "option_b": "The announcement\u2014which surprised everyone\u2014was made at midnight.",
+      "option_c": "They worked hard\u2014but failed\u2014the test.",
+      "option_d": "She bought\u2014milk, eggs, and bread at the store.",
+      "correct_answer": "B",
+      "explanation": "Paired dashes set off a non-essential interrupting phrase. In option B, \u201cwhich surprised everyone\u201d is a non-essential parenthetical, correctly enclosed by two dashes.\n\nIn option A, the dash incorrectly separates the subject from its verb. Options C and D use dashes where they don\u2019t belong logically.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 167,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "hard",
+      "text": "Which choice correctly punctuates two independent clauses connected by \u201ctherefore\u201d?",
+      "option_a": "The bridge was damaged, therefore the road was closed.",
+      "option_b": "The bridge was damaged therefore, the road was closed.",
+      "option_c": "The bridge was damaged; therefore, the road was closed.",
+      "option_d": "The bridge was damaged; therefore the road was closed.",
+      "correct_answer": "C",
+      "explanation": "\u201cTherefore\u201d is a conjunctive adverb. The correct pattern is:\n[independent clause]; therefore, [independent clause]\n\nA semicolon comes BEFORE \u201ctherefore\u201d and a comma comes AFTER it.\nOption A (comma splice), B (misplaced comma), and D (missing comma after \u201ctherefore\u201d) are all incorrect.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 168,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "hard",
+      "text": "Which sentence correctly uses a colon?",
+      "option_a": "She had many talents: including singing, dancing, and painting.",
+      "option_b": "She excelled in: singing, dancing, and painting.",
+      "option_c": "She had three main talents: singing, dancing, and painting.",
+      "option_d": "She was talented: in singing, dancing, and painting.",
+      "correct_answer": "C",
+      "explanation": "A colon must follow a COMPLETE independent clause before introducing a list.\n\u201cShe had three main talents\u201d is a complete clause \u2192 colon \u2192 list. \u2713\n\nOptions A, B, and D place colons after incomplete clauses. In option A, \u201cincluding\u201d after a colon is also redundant.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 169,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "hard",
+      "text": "Which of the following is correctly punctuated?",
+      "option_a": "Its important to proofread you're work carefully.",
+      "option_b": "It's important to proofread your work carefully.",
+      "option_c": "Its' important to proofread your work carefully.",
+      "option_d": "It's important to proofread you're work carefully.",
+      "correct_answer": "B",
+      "explanation": "Two rules at work:\n1. \u201cIt\u2019s\u201d (with apostrophe) = \u201cit is.\u201d \u201cIts\u201d (no apostrophe) = possessive.\n2. \u201cYour\u201d = possessive. \u201cYou\u2019re\u201d = \u201cyou are.\u201d\n\nCorrect: \u201cIt is important to proofread your work.\u201d\u2192 It\u2019s important to proofread your work.",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "practice.question", "pk": 170,
+    "fields": {
+      "subject": 2, "topic": 10, "difficulty": "hard",
+      "text": "Which choice correctly punctuates the sentence to avoid a run-on?\n\n\"The experiment produced unexpected results the scientists decided to repeat it\"",
+      "option_a": "The experiment produced unexpected results, the scientists decided to repeat it.",
+      "option_b": "The experiment produced unexpected results; the scientists decided to repeat it.",
+      "option_c": "The experiment produced unexpected results the scientists decided to repeat it.",
+      "option_d": "The experiment produced unexpected results and decided to repeat it.",
+      "correct_answer": "B",
+      "explanation": "Two independent clauses can be joined with a semicolon.\nOption A is a comma splice (two independent clauses joined only by a comma).\nOption C is a run-on (no punctuation between clauses).\nOption D changes the meaning and creates a mismatched subject (the experiment cannot \u201cdecide\u201d).",
+      "source": "PSAT 8/9 Practice", "active": true, "created_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

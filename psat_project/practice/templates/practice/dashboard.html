@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard — PSAT Practice{% endblock %}
+
+{% block content %}
+<div style="max-width:1000px;margin:2rem auto;padding:0 1rem">
+
+  <div style="margin-bottom:1.75rem">
+    <h1 style="font-size:1.75rem;font-weight:800;margin:0">Welcome back, {{ user.first_name|default:user.username }}! 👋</h1>
+    <p style="color:var(--text-muted);margin:.25rem 0 0">Ready to practice for the PSAT?</p>
+  </div>
+
+  <!-- Subject cards -->
+  <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:.75rem">Choose a Subject</h2>
+  <div class="dashboard-grid" style="margin-bottom:2rem">
+    {% for subject in subjects %}
+    <div class="subject-card" onclick="window.location.href='{% url 'start_test' subject.slug %}'">
+      <div class="subject-icon">{{ subject.icon }}</div>
+      <h2>{{ subject.name }}</h2>
+      <p>{{ subject.description }}</p>
+      <div style="margin-top:.75rem;display:flex;gap:.5rem;font-size:.8rem;color:var(--text-muted)">
+        <span>📝 {{ subject.questions_per_test }} questions</span>
+        <span>⏱ {{ subject.test_duration_minutes }} min</span>
+      </div>
+      {% with s=stats|dictsort:"0" %}
+      {% for slug, stat in stats.items %}
+        {% if slug == subject.slug and stat.total > 0 %}
+        <div style="margin-top:.6rem;font-size:.8rem;color:var(--success);font-weight:600">
+          ✓ {{ stat.total }} attempt{{ stat.total|pluralize }} · avg {{ stat.avg_accuracy|floatformat:0 }}%
+        </div>
+        {% endif %}
+      {% endfor %}
+      {% endwith %}
+      <button class="btn btn-primary btn-sm" style="margin-top:.85rem" onclick="event.stopPropagation();window.location.href='{% url 'start_test' subject.slug %}'">
+        Start Test →
+      </button>
+    </div>
+    {% empty %}
+    <div class="card" style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted)">
+      No subjects configured yet. Ask your admin to set them up.
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Progress chart -->
+  {% if chart_labels != "[]" %}
+  <div class="card" style="margin-bottom:2rem">
+    <h2 style="font-size:1.05rem;font-weight:700;margin:0 0 1rem">Recent Performance</h2>
+    <canvas id="progressChart" height="90"></canvas>
+  </div>
+  {% endif %}
+
+  <!-- Recent attempts -->
+  {% if attempts %}
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+      <h2 style="font-size:1.05rem;font-weight:700;margin:0">Recent Attempts</h2>
+      <a href="{% url 'history' %}" style="font-size:.85rem;color:var(--primary);font-weight:600">View all →</a>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Score</th>
+            <th>Accuracy</th>
+            <th>Duration</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for attempt in attempts %}
+          <tr>
+            <td>{{ attempt.subject.icon }} {{ attempt.subject.name }}</td>
+            <td>{{ attempt.started_at|date:"M d, Y H:i" }}</td>
+            <td>{{ attempt.score }}/{{ attempt.total_questions }}</td>
+            <td>
+              <span style="font-weight:700;color:{% if attempt.accuracy >= 80 %}var(--success){% elif attempt.accuracy >= 60 %}var(--warning){% else %}var(--danger){% endif %}">
+                {{ attempt.accuracy|floatformat:1 }}%
+              </span>
+            </td>
+            <td>{{ attempt.formatted_duration }}</td>
+            <td><a href="{% url 'test_results' attempt.pk %}" class="btn btn-outline btn-sm">Review</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% if chart_labels != "[]" %}
+<script>
+const ctx = document.getElementById('progressChart').getContext('2d');
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: {{ chart_labels|safe }},
+    datasets: [{
+      label: 'Score',
+      data: {{ chart_scores|safe }},
+      borderColor: '#4f46e5',
+      backgroundColor: 'rgba(79,70,229,.1)',
+      borderWidth: 2.5,
+      pointRadius: 5,
+      tension: 0.3,
+      fill: true,
+    }],
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true, max: 20, title: { display: true, text: 'Score (out of 20)' } },
+    },
+  },
+});
+</script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Register — PSAT Practice{% endblock %}
+
+{% block content %}
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <h1>📘 PSAT Practice</h1>
+      <p>Create your student account</p>
+    </div>
+
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags|default:'info' }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="post" novalidate>
+      {% csrf_token %}
+
+      {% for field in form %}
+      <div class="form-group">
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}
+          {% for error in field.errors %}
+          <p style="color:var(--danger);font-size:.85rem;margin-top:.25rem">{{ error }}</p>
+          {% endfor %}
+        {% endif %}
+      </div>
+      {% endfor %}
+
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem">
+        Create Account
+      </button>
+    </form>
+
+    <p style="text-align:center;margin-top:1.25rem;font-size:.9rem;color:var(--text-muted)">
+      Already have an account? <a href="{% url 'login' %}" style="color:var(--primary);font-weight:600">Sign in</a>
+    </p>
+    <p style="text-align:center;font-size:.8rem;color:var(--text-muted);margin-top:.5rem">
+      After registration, an admin will approve your account.
+    </p>
+  </div>
+</div>
+{% endblock %}
