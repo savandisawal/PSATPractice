@@ -16,20 +16,20 @@ class Command(BaseCommand):
         english = Subject.objects.get(slug='english')
 
         # ── English Topics ──────────────────────────────────────────────
-        ev = Topic.objects.create(subject=english, name='Vocabulary in Context')
-        rc = Topic.objects.create(subject=english, name='Reading Comprehension')
-        de = Topic.objects.create(subject=english, name='Data and Evidence')
-        gv = Topic.objects.create(subject=english, name='Grammar: Verb Usage')
-        gp = Topic.objects.create(subject=english, name='Grammar: Punctuation')
-        tr = Topic.objects.create(subject=english, name='Transitions')
-        rn = Topic.objects.create(subject=english, name='Research Notes')
+        ev, _ = Topic.objects.get_or_create(subject=english, name='Vocabulary in Context')
+        rc, _ = Topic.objects.get_or_create(subject=english, name='Reading Comprehension')
+        de, _ = Topic.objects.get_or_create(subject=english, name='Data and Evidence')
+        gv, _ = Topic.objects.get_or_create(subject=english, name='Grammar: Verb Usage')
+        gp, _ = Topic.objects.get_or_create(subject=english, name='Grammar: Punctuation')
+        tr, _ = Topic.objects.get_or_create(subject=english, name='Transitions')
+        rn, _ = Topic.objects.get_or_create(subject=english, name='Research Notes')
 
         # ── Math Topics ──────────────────────────────────────────────────
-        alg = Topic.objects.create(subject=math, name='Algebra and Equations')
-        fun = Topic.objects.create(subject=math, name='Functions and Graphs')
-        geo = Topic.objects.create(subject=math, name='Geometry')
-        dsp = Topic.objects.create(subject=math, name='Data, Statistics, and Probability')
-        wp  = Topic.objects.create(subject=math, name='Word Problems')
+        alg, _ = Topic.objects.get_or_create(subject=math, name='Algebra and Equations')
+        fun, _ = Topic.objects.get_or_create(subject=math, name='Functions and Graphs')
+        geo, _ = Topic.objects.get_or_create(subject=math, name='Geometry')
+        dsp, _ = Topic.objects.get_or_create(subject=math, name='Data, Statistics, and Probability')
+        wp, _  = Topic.objects.get_or_create(subject=math, name='Word Problems')
 
         # ── helper ───────────────────────────────────────────────────────
         def q(topic, diff, text, a, b, c, d, ans, expl=''):
