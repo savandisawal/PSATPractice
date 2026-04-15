@@ -2,61 +2,71 @@
 {% block title %}Test History — PSAT Practice{% endblock %}
 
 {% block content %}
-<div style="max-width:900px;margin:2rem auto;padding:0 1rem">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem">
-    <h1 style="font-size:1.5rem;font-weight:800;margin:0">Test History</h1>
+<div class="max-w-5xl mx-auto py-8 px-4">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-extrabold">Test History</h1>
     <a href="{% url 'dashboard' %}" class="btn btn-outline btn-sm">← Dashboard</a>
   </div>
 
   {% if attempts %}
-  <div class="card" style="overflow-x:auto">
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Subject</th>
-          <th>Date & Time</th>
-          <th>Score</th>
-          <th>Correct</th>
-          <th>Incorrect</th>
-          <th>Accuracy</th>
-          <th>Duration</th>
-          <th>Status</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for attempt in attempts %}
-        <tr>
-          <td style="color:var(--text-muted);font-size:.8rem">{{ forloop.counter }}</td>
-          <td>{{ attempt.subject.icon }} {{ attempt.subject.name }}</td>
-          <td>{{ attempt.started_at|date:"M d, Y H:i" }}</td>
-          <td><strong>{{ attempt.score }}/{{ attempt.total_questions }}</strong></td>
-          <td style="color:var(--success);font-weight:700">{{ attempt.correct_count }}</td>
-          <td style="color:var(--danger);font-weight:700">{{ attempt.incorrect_count }}</td>
-          <td>
-            <span style="font-weight:700;color:{% if attempt.accuracy >= 80 %}var(--success){% elif attempt.accuracy >= 60 %}var(--warning){% else %}var(--danger){% endif %}">
-              {{ attempt.accuracy|floatformat:1 }}%
-            </span>
-          </td>
-          <td>{{ attempt.formatted_duration }}</td>
-          <td>
-            {% if attempt.status == 'timed_out' %}
-            <span style="font-size:.75rem;background:#fef3c7;color:var(--warning);padding:.15rem .5rem;border-radius:9999px">Timed Out</span>
-            {% else %}
-            <span style="font-size:.75rem;background:#dcfce7;color:var(--success);padding:.15rem .5rem;border-radius:9999px">Submitted</span>
-            {% endif %}
-          </td>
-          <td><a href="{% url 'test_results' attempt.pk %}" class="btn btn-outline btn-sm">Review</a></td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  <div class="card bg-base-100 shadow overflow-x-auto">
+    <div class="card-body p-0">
+      <table class="table table-zebra text-sm">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Subject</th>
+            <th>Date & Time</th>
+            <th>Score</th>
+            <th>Correct</th>
+            <th>Incorrect</th>
+            <th>Accuracy</th>
+            <th>Duration</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for attempt in attempts %}
+          <tr>
+            <td class="text-xs" style="color:var(--text-muted)">{{ forloop.counter }}</td>
+            <td>{{ attempt.subject.icon }} {{ attempt.subject.name }}</td>
+            <td>{{ attempt.started_at|date:"M d, Y H:i" }}</td>
+            <td><strong>{{ attempt.score }}/{{ attempt.total_questions }}</strong></td>
+            <td class="font-bold" style="color:var(--success)">{{ attempt.correct_count }}</td>
+            <td class="font-bold" style="color:var(--danger)">{{ attempt.incorrect_count }}</td>
+            <td>
+              <span class="font-bold"
+                style="color:{% if attempt.accuracy >= 80 %}var(--success){% elif attempt.accuracy >= 60 %}var(--warning){% else %}var(--danger){% endif %}">
+                {{ attempt.accuracy|floatformat:1 }}%
+              </span>
+            </td>
+            <td>{{ attempt.formatted_duration }}</td>
+            <td>
+              {% if attempt.status == 'timed_out' %}
+              <span class="badge badge-warning badge-sm">Timed Out</span>
+              {% else %}
+              <span class="badge badge-success badge-sm">Submitted</span>
+              {% endif %}
+            </td>
+            <td>
+              <a href="{% url 'test_results' attempt.pk %}" class="btn btn-outline btn-xs">Review</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
   {% else %}
-  <div class="card" style="text-align:center;padding:3rem;color:var(--text-muted)">
-    <div style="font-size:3rem">📋</div>
-    <p>No completed tests yet. <a href="{% url 'dashboard' %}" style="color:var(--primary);font-weight:600">Start practicing!</a></p>
+  <div class="card bg-base-100 shadow">
+    <div class="card-body text-center py-16">
+      <div class="text-5xl mb-4">📋</div>
+      <p style="color:var(--text-muted)">
+        No completed tests yet.
+        <a href="{% url 'dashboard' %}" class="font-semibold" style="color:var(--primary)">Start practicing!</a>
+      </p>
+    </div>
   </div>
   {% endif %}
 </div>

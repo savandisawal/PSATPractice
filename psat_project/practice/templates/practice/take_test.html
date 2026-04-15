@@ -10,17 +10,17 @@
 
 {% block content %}
 <!-- Top bar -->
-<div style="background:#fff;border-bottom:1px solid var(--border);padding:.75rem 1rem;display:flex;align-items:center;gap:1rem;position:sticky;top:0;z-index:100;box-shadow:var(--shadow)">
-  <span style="font-weight:700;color:var(--primary)">{{ subject.icon }} {{ subject.name }} Test</span>
-  <div style="flex:1"></div>
-  <!-- Progress bar (inline) -->
-  <div style="width:160px">
+<div class="bg-base-100 border-b border-base-300 px-4 py-3 flex items-center gap-3 sticky top-0 z-[100] shadow-sm">
+  <span class="font-bold" style="color:var(--primary)">{{ subject.icon }} {{ subject.name }} Test</span>
+  <div class="flex-1"></div>
+  <!-- Progress bar (div-based so JS can set style.width) -->
+  <div class="w-40">
     <div class="progress-track"><div id="progress-bar" style="width:0%"></div></div>
-    <div id="progress-label" style="font-size:.7rem;color:var(--text-muted);text-align:right"></div>
+    <div id="progress-label" class="text-right mt-0.5" style="font-size:.7rem;color:var(--text-muted)"></div>
   </div>
   <button class="btn btn-outline btn-sm" onclick="openCalculator()">🧮 Calculator</button>
   <button class="btn btn-outline btn-sm" onclick="openWhiteboard()">✏️ Whiteboard</button>
-  <button class="btn btn-danger btn-sm" id="submit-btn" onclick="confirmSubmit()">Submit Test</button>
+  <button class="btn btn-error btn-sm" id="submit-btn" onclick="confirmSubmit()">Submit Test</button>
 </div>
 
 <div class="test-layout">
@@ -31,18 +31,18 @@
       <div id="timer-display" class="timer-normal">25:00</div>
     </div>
 
-    <div style="font-size:.8rem;font-weight:700;color:var(--text-muted);margin-bottom:.4rem">Questions</div>
+    <div class="mb-1" style="font-size:.8rem;font-weight:700;color:var(--text-muted)">Questions</div>
     <div id="question-nav"></div>
 
-    <div class="nav-legend" style="margin-bottom:.75rem">
+    <div class="nav-legend mb-3">
       <div><span class="legend-dot" style="background:#4f46e5"></span>Current</div>
       <div><span class="legend-dot" style="background:#dcfce7;border:1px solid #16a34a"></span>Answered</div>
       <div><span class="legend-dot" style="background:#fff;border:1px solid #d97706"></span>Flagged</div>
     </div>
 
-    <div style="display:flex;gap:.4rem">
-      <button class="btn btn-outline btn-sm" style="flex:1" onclick="prevQ()">← Prev</button>
-      <button class="btn btn-outline btn-sm" style="flex:1" onclick="nextQ()">Next →</button>
+    <div class="flex gap-1">
+      <button class="btn btn-outline btn-sm flex-1" onclick="prevQ()">← Prev</button>
+      <button class="btn btn-outline btn-sm flex-1" onclick="nextQ()">Next →</button>
     </div>
   </aside>
 
@@ -51,11 +51,9 @@
     {% for tq in test_questions %}
     <div class="question-card {% if not forloop.first %}hidden{% endif %}" data-order="{{ tq.order }}">
       <div class="question-number">Question {{ tq.order }} of {{ attempt.total_questions }}
-        <span style="margin-left:.5rem;font-size:.75rem;padding:.1rem .4rem;border-radius:9999px;background:#f1f5f9">
-          {{ tq.question.difficulty|capfirst }}
-        </span>
+        <span class="badge badge-ghost badge-sm ml-1">{{ tq.question.difficulty|capfirst }}</span>
         {% if tq.question.topic %}
-        <span style="margin-left:.25rem;font-size:.75rem;color:var(--text-muted)">· {{ tq.question.topic.name }}</span>
+        <span class="ml-1" style="font-size:.75rem;color:var(--text-muted)">· {{ tq.question.topic.name }}</span>
         {% endif %}
       </div>
 
@@ -72,13 +70,13 @@
         {% endfor %}
       </div>
 
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem">
+      <div class="flex justify-between items-center mt-4">
         <button class="btn btn-outline review-btn {% if tq.marked_for_review %}marked{% endif %}"
                 id="review-btn-{{ tq.order }}"
                 onclick="toggleReview({{ tq.order }})">
           {% if tq.marked_for_review %}🚩 Marked for Review{% else %}⚑ Mark for Review{% endif %}
         </button>
-        <div style="display:flex;gap:.5rem">
+        <div class="flex gap-2">
           {% if not forloop.first %}
           <button class="btn btn-outline btn-sm" onclick="prevQ()">← Prev</button>
           {% endif %}

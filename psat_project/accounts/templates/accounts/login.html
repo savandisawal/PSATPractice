@@ -11,7 +11,9 @@
 
     {% if messages %}
       {% for message in messages %}
-      <div class="alert alert-{{ message.tags|default:'info' }}">{{ message }}</div>
+      <div role="alert" class="alert alert-{{ message.tags|default:'info' }} mb-3 text-sm">
+        <span>{{ message }}</span>
+      </div>
       {% endfor %}
     {% endif %}
 
@@ -24,21 +26,20 @@
         {{ field }}
         {% if field.errors %}
           {% for error in field.errors %}
-          <p style="color:var(--danger);font-size:.85rem;margin-top:.25rem">{{ error }}</p>
+          <p class="text-red-600 text-xs mt-1">{{ error }}</p>
           {% endfor %}
         {% endif %}
       </div>
       {% endfor %}
 
-      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem">
-        Sign In
-      </button>
+      <button type="submit" class="btn btn-primary w-full justify-center mt-2">Sign In</button>
     </form>
 
-    <p style="text-align:center;margin-top:1.25rem;font-size:.9rem;color:var(--text-muted)">
-      Don't have an account? <a href="{% url 'register' %}" style="color:var(--primary);font-weight:600">Register</a>
+    <p class="text-center mt-5 text-sm" style="color:var(--text-muted)">
+      Don't have an account?
+      <a href="{% url 'register' %}" class="font-semibold" style="color:var(--primary)">Register</a>
     </p>
-    <p style="text-align:center;margin-top:.5rem;font-size:.85rem;color:var(--text-muted)">
+    <p class="text-center mt-1 text-xs" style="color:var(--text-muted)">
       Admin? <a href="/admin/" style="color:var(--text-muted)">Login here</a>
     </p>
   </div>
