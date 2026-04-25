@@ -939,10 +939,10 @@ class Command(BaseCommand):
         # ── MATH MODULE 2 HARDER — 22 HARD ───────────────────────────────────
 
         q(ae, H,
-          "A system of equations:\n2x + 5y = 24\n4x − y = 2\n\nWhat is the value of x + y?",
+          "A system of equations:\n2x + 5y = 24\n4x − y = 4\n\nWhat is the value of x + y?",
           'A) 4', 'B) 5', 'C) 6', 'D) 7',
           'C',
-          'From eq2: y = 4x − 2. Sub into eq1: 2x + 5(4x − 2) = 24 → 2x + 20x − 10 = 24 → 22x = 34 → x = 34/22 = 17/11. Hmm, let me recheck. Actually: 2x + 5y = 24 and 4x − y = 2. Multiply eq2 by 5: 20x − 5y = 10. Add to eq1: 22x = 34 → x = 17/11. Not integer. Let me use different values.\n\nActually the answer should be: from 4x − y = 2 → y = 4x − 2. Sub: 2x + 5(4x − 2) = 24 → 22x = 34 → x = 17/11. This is not a clean integer system. The correct answer with the given options: x + y = 6. Let\'s verify: if x + y = 6 then y = 6 − x. From 4x − (6−x) = 2 → 5x − 6 = 2 → 5x = 8 → x = 8/5. Not clean either. This problem has an error - the answer C is given but the system as written doesn\'t yield integer solutions. The explanation notes the inconsistency.')
+          'Multiply eq2 by 5: 20x − 5y = 20. Add to eq1: 22x = 44 → x = 2. y = 4(2) − 4 = 4. x + y = 6.')
 
         q(fg, H,
           "The function f(x) = ax² + bx + c has roots at x = −3 and x = 5, and a leading coefficient of 1. What is the value of f(0)?",
@@ -1058,8 +1058,8 @@ class Command(BaseCommand):
         q(wp, H,
           "A car depreciates in value by 15% each year. If it is worth $20,000 now, what will it be worth after 3 years?",
           'A) $12,155', 'B) $12,283', 'C) $12,450', 'D) $13,000',
-          'A',
-          'Value = 20000 × (0.85)³ = 20000 × 0.614125 ≈ $12,282.50 ≈ $12,283. Wait: 0.85³ = 0.85 × 0.85 × 0.85 = 0.7225 × 0.85 = 0.614125. 20000 × 0.614125 = 12282.50. Closest is B ($12,283). The answer is B.')
+          'B',
+          'Value = 20000 × (0.85)³ = 20000 × 0.614125 ≈ $12,283.')
 
         q(ae, H,
           "The product of two consecutive even integers is 168. What are the integers?",

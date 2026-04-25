@@ -1100,12 +1100,12 @@ class Command(BaseCommand):
           "g(4) = 16 − 1 = 15.")
 
         q(fun, E, "Which point lies on the graph of y = 3x + 2?",
-          "(1, 6)", "(2, 8)", "(1, 5)", "(0, 3)", "B",
-          "y = 3(2)+2 = 8 ✓. Others: (1,6): 3+2=5≠6; (1,5): ✓ — wait, (1,5): 3(1)+2=5 ✓. So C is also correct. Let me recheck B: y=3(2)+2=8 ✓. C: y=3(1)+2=5 ✓. I need unique answers.")
+          "(1, 6)", "(2, 8)", "(1, 4)", "(0, 3)", "B",
+          "y = 3(2)+2 = 8 ✓. Check others: (1,6): 3+2=5≠6; (1,4): 3+2=5≠4; (0,3): 2≠3.")
 
         q(fun, E, "Which point lies on the line y = 2x − 3?",
-          "(0, 3)", "(2, 1)", "(3, 3)", "(1, −1)", "D",
-          "y = 2(1)−3 = −1 ✓. Others: (0,3): −3≠3; (2,1): 4−3=1 ✓ — B also works. Let me use a different question.")
+          "(0, 3)", "(2, 2)", "(3, 4)", "(1, −1)", "D",
+          "y = 2(1)−3 = −1 ✓. Check others: (0,3): −3≠3; (2,2): 4−3=1≠2; (3,4): 6−3=3≠4.")
 
         q(fun, E, "If f(x) = −2x + 6, what is f(4)?",
           "−2", "0", "2", "14", "A",
@@ -1172,24 +1172,24 @@ class Command(BaseCommand):
         # ════════════════════════════════════════════════════════════════
 
         q(alg, H,
-          "If 5x + 2y = 20 and y = 2x − 1, what is the value of x?",
+          "If 5x + 2y = 16 and y = 2x − 1, what is the value of x?",
           "2", "3", "4", "5", "A",
-          "Substitute: 5x + 2(2x−1) = 20 → 5x + 4x − 2 = 20 → 9x = 22 → x = 22/9. Hmm, not an integer. Let me fix.")
+          "Substitute: 5x + 2(2x−1) = 16 → 9x − 2 = 16 → 9x = 18 → x = 2.")
 
         q(alg, H,
-          "If 4x + 3y = 18 and y = 2x, what is the value of x?",
+          "If 4x + 3y = 20 and y = 2x, what is the value of x?",
           "1", "2", "3", "4", "B",
-          "Substitute: 4x + 3(2x) = 18 → 4x + 6x = 18 → 10x = 18 → x = 1.8. Not integer. Let me try again.")
+          "Substitute: 4x + 3(2x) = 20 → 10x = 20 → x = 2.")
 
         q(alg, H,
           "Solve the system: 2x + y = 9 and x − y = 3. What is x + y?",
-          "4", "5", "6", "7", "C",
-          "Add equations: 3x = 12 → x = 4; y = 9−8 = 1. x+y = 5. Wait: 2(4)+y=9 → y=1. x+y=5. Answer is B.")
+          "4", "5", "6", "7", "B",
+          "Add equations: 3x = 12 → x = 4. Then y = 9 − 8 = 1. x + y = 5.")
 
         q(alg, H,
-          "Solve the system: 3x − y = 11 and x + 2y = 0. What is the value of y?",
+          "Solve the system: 3x − y = 21 and x + 2y = 0. What is the value of y?",
           "−3", "−2", "−1", "0", "A",
-          "From eq2: x = −2y. Substitute: 3(−2y)−y = 11 → −7y = 11 → y = −11/7. Not integer. Let me recalculate. x = −2y; 3(−2y)−y=11 → −6y−y=11 → −7y=11 → y=−11/7. Need to fix.")
+          "From eq2: x = −2y. Substitute: 3(−2y)−y = 21 → −7y = 21 → y = −3.")
 
         q(alg, H,
           "Solve the system: x + y = 7 and 3x − y = 9. What is the value of x?",
@@ -1245,14 +1245,14 @@ class Command(BaseCommand):
         q(geo, H,
           "Two supplementary angles have measures (4x + 15)° and (2x + 9)°. "
           "What is the larger angle?",
-          "99°", "103°", "107°", "111°", "C",
-          "4x+15+2x+9=180 → 6x+24=180 → 6x=156 → x=26. Larger: 4(26)+15=119°. Wait: 4(26)=104+15=119; 2(26)=52+9=61. 119+61=180 ✓. Larger = 119°. None of the options match. Let me fix the question.")
+          "99°", "103°", "107°", "119°", "D",
+          "4x+15+2x+9=180 → 6x+24=180 → x=26. Larger: 4(26)+15 = 119°.")
 
         q(geo, H,
           "Two supplementary angles have measures (3x + 10)° and (x + 30)°. "
           "What is the measure of the larger angle?",
-          "107.5°", "115°", "122.5°", "130°", "C",
-          "3x+10+x+30=180 → 4x+40=180 → 4x=140 → x=35. Larger: 3(35)+10=115°. Wait: that's B. Let me check: 3(35)=105+10=115; x+30=35+30=65; 115+65=180 ✓. Larger = 115°, which is B.")
+          "107.5°", "115°", "122.5°", "130°", "B",
+          "3x+10+x+30=180 → 4x=140 → x=35. Larger: 3(35)+10 = 115°.")
 
         q(dsp, H,
           "The mean of six numbers is 12. Five of the numbers are 8, 10, 14, 15, 11. "

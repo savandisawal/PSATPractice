@@ -1061,8 +1061,8 @@ class Command(BaseCommand):
         q(wp, M,
           "A student needs 85% to pass a course. She has scored 72, 90, and 88 "
           "on three tests. What must she score on the fourth test?",
-          "80", "85", "90", "95", "B",
-          "Total needed = 85 × 4 = 340. Current = 250. Need: 340 − 250 = 90. Wait: 72+90+88=250; need 340−250=90. That's C. Let me recheck: 72+90+88=250; 340−250=90. So C.")
+          "80", "85", "90", "95", "C",
+          "Total needed = 85 × 4 = 340. Current = 72+90+88 = 250. Need: 340 − 250 = 90.")
 
         q(wp, M,
           "A student needs 84% average on 4 tests. She scored 78, 88, and 81 "
@@ -1187,8 +1187,8 @@ class Command(BaseCommand):
 
         q(alg, H,
           "If (2x + 1)(x − 3) = 0 and x < 0, what is the value of 4x + 6?",
-          "0", "3", "4", "12", "A",
-          "2x+1=0 → x=−1/2, or x=3. Since x<0, x=−1/2. 4(−1/2)+6 = −2+6 = 4. That's C.")
+          "0", "3", "4", "12", "C",
+          "2x+1=0 → x=−1/2, or x=3. Since x<0, x=−1/2. 4(−1/2)+6 = −2+6 = 4.")
 
         q(alg, H,
           "If (x + 3)(x − 5) = 0 and x > 0, what is the value of 3x − 4?",
@@ -1211,13 +1211,13 @@ class Command(BaseCommand):
 
         q(alg, H,
           "If 5x − 2y = 16 and 3x + y = 14, what is the value of x + y?",
-          "6", "7", "8", "9", "C",
-          "From eq2: y = 14−3x. Sub into eq1: 5x−2(14−3x)=16 → 5x−28+6x=16 → 11x=44 → x=4. y=2. x+y=6. Hmm that's A.")
+          "6", "7", "8", "9", "A",
+          "From eq2: y = 14−3x. Sub into eq1: 5x−2(14−3x)=16 → 11x=44 → x=4. y=2. x+y=6.")
 
         q(alg, H,
           "If 2x + 3y = 18 and 4x − y = 8, what is y?",
-          "2", "3", "4", "5", "A",
-          "From eq2: y = 4x−8. Sub: 2x+3(4x−8)=18 → 14x−24=18 → 14x=42 → x=3. y=4−8=4. Hmm x=3 → y=4(3)−8=4. So C.")
+          "2", "3", "4", "5", "C",
+          "From eq2: y = 4x−8. Sub: 2x+3(4x−8)=18 → 14x=42 → x=3. y=4(3)−8=4.")
 
         q(alg, H,
           "If 3x − y = 7 and x + 2y = 14, what is x?",
@@ -1290,11 +1290,11 @@ class Command(BaseCommand):
           "For the median of 5 values to be the 3rd value = 18, sorting must put 18 in the middle. If x=18: sorted = 10,15,18,25,30. Median=18 ✓.")
 
         q(dsp, H,
-          "In a set of 5 numbers, the median is 12, the mean is 14, and the mode "
-          "is 10. If the largest number is 22 and the smallest is 8, what is "
-          "the sum of the remaining two numbers?",
+          "A set of 5 numbers has a sum of 70. Three of the numbers are 8, 12, and "
+          "22. The two remaining numbers are equal. What is the sum of the two "
+          "remaining numbers?",
           "24", "26", "28", "30", "C",
-          "Total sum = 14×5=70. Known: 8,10,12,10 (mode=10 means 10 appears at least twice),22. Wait: median=12, mode=10. If mode=10, 10 appears most. Values: 8,10,10,12,22 — sum=62≠70. Let me try: 8,10,12,10,22 fails. Need sum=70. 8+?,12,?,22. Mode=10 so 10 appears at least twice. If set is 8,10,10,12,22: sum=62. Not 70. Try 8,10,10,12,x: 5th value must be 30 to get sum=70, but then 30>22 (largest). The question has a flaw. Let me fix.")
+          "Total sum = 70. Known: 8+12+22 = 42. Remaining sum = 70 − 42 = 28.")
 
         q(dsp, H,
           "A set of data has mean 50, median 48, and mode 45. A new value of 50 "

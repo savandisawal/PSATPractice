@@ -973,8 +973,8 @@ class Command(BaseCommand):
           "6x = 36; x = 6.")
 
         q(alg, M, "If 5(x + 2) = 3(x + 8), what is x?",
-          "5", "7", "9", "11", "D",
-          "5x + 10 = 3x + 24 → 2x = 14 → x = 7. Wait: 2x = 14 → x = 7. That's B.")
+          "5", "7", "9", "11", "B",
+          "5x + 10 = 3x + 24 → 2x = 14 → x = 7.")
 
         q(alg, M, "If 3(2x + 1) = 5x + 8, what is x?",
           "3", "4", "5", "6", "C",
@@ -1210,9 +1210,9 @@ class Command(BaseCommand):
           "x²−4x−12=0 → (x−6)(x+2)=0 → x=6 or x=−2.")
 
         q(alg, H,
-          "If 2x + 3y = 15 and 4x − y = 5, what is the value of y?",
+          "If 2x + 3y = 13 and 4x − y = 5, what is the value of y?",
           "1", "2", "3", "4", "C",
-          "From eq2: y = 4x−5. Substitute: 2x + 3(4x−5) = 15 → 14x − 15 = 15 → 14x = 30 → x = 15/7. Hmm. Let me try elimination. Multiply eq2 by 3: 12x−3y=15. Add to eq1: 14x=30 → x=15/7. Not integer. Let me fix.")
+          "From eq2: y = 4x−5. Sub into eq1: 2x+3(4x−5)=13 → 14x=28 → x=2. y=4(2)−5=3.")
 
         q(alg, H,
           "If 3x + y = 13 and x − y = 3, what is the value of y?",
@@ -1220,10 +1220,10 @@ class Command(BaseCommand):
           "Add equations: 4x = 16 → x = 4. Then y = 13−12 = 1.")
 
         q(fun, H,
-          "If f(x) = x² − 4 and g(x) = x + 3, for what value of x does f(x) = g(x)?",
-          "x = −7 or x = 1", "x = −1 or x = 7",
-          "x = 7 only", "x = 1 only", "B",
-          "x²−4 = x+3 → x²−x−7=0. Wait, this doesn't factor nicely. Let me fix: f(x) = x²−4; g(x)=x+3. x²−4=x+3 → x²−x−7=0. Discriminant = 1+28=29. Not integer. Fix.")
+          "If f(x) = x² − 4 and g(x) = 2x − 1, for what values of x does f(x) = g(x)?",
+          "x = −3 or x = 1", "x = −1 or x = 3",
+          "x = 3 only", "x = −1 only", "B",
+          "x²−4 = 2x−1 → x²−2x−3 = 0 → (x−3)(x+1) = 0 → x = 3 or x = −1.")
 
         q(fun, H,
           "If f(x) = x² and g(x) = 2x + 3, for what value of x does f(x) = g(x)?",
@@ -1255,8 +1255,8 @@ class Command(BaseCommand):
         q(geo, H,
           "An equilateral triangle has a perimeter of 36 cm. What is the area "
           "of the triangle? (Use √3 ≈ 1.73)",
-          "27√3 cm²", "36√3 cm²", "54√3 cm²", "72√3 cm²", "A",
-          "Side = 12 cm. Area = (√3/4) × 12² = (√3/4) × 144 = 36√3 ≈ 62.28 cm². Hmm. Let me just give the exact answer: 36√3.")
+          "27√3 cm²", "36√3 cm²", "54√3 cm²", "72√3 cm²", "B",
+          "Side = 36/3 = 12 cm. Area = (√3/4) × 12² = (√3/4) × 144 = 36√3 cm².")
 
         q(geo, H,
           "An equilateral triangle has side length 12 cm. What is its area in "
@@ -1273,8 +1273,8 @@ class Command(BaseCommand):
         q(dsp, H,
           "A data set of 12 values has a sum of 204. Three values of 30 are "
           "each replaced by 18. What is the new mean?",
-          "14", "15", "16", "17", "B",
-          "New sum = 204 − 3(30) + 3(18) = 204 − 90 + 54 = 168. New mean = 168/12 = 14. Wait: 168/12 = 14. That's A.")
+          "14", "15", "16", "17", "A",
+          "New sum = 204 − 3(30) + 3(18) = 204 − 90 + 54 = 168. New mean = 168/12 = 14.")
 
         q(dsp, H,
           "A data set of 10 values has a mean of 20. Three values are removed, "

@@ -941,8 +941,8 @@ class Command(BaseCommand):
 
         q(alg, M,
           "A line has equation y = −2x + 7. Which ordered pair lies on this line?",
-          "(1, 5)", "(2, 3)", "(3, 1)", "(4, −1)", "C",
-          "y = −2(3) + 7 = −6 + 7 = 1 ✓. Check others: (1,5): −2+7=5 ✓ — wait, both (1,5) and (3,1) work. Let me verify: (1,5): y=−2(1)+7=5 ✓. So A is also correct.")
+          "(1, 4)", "(2, 2)", "(3, 1)", "(4, 0)", "C",
+          "y = −2(3) + 7 = 1 ✓. Check others: (1,4): −2+7=5≠4; (2,2): −4+7=3≠2; (4,0): −8+7=−1≠0.")
 
         q(alg, M,
           "A line has equation y = −2x + 3. Which ordered pair lies on this line?",
@@ -1081,8 +1081,8 @@ class Command(BaseCommand):
           "y = −3 + 5 = 2 ✓ for (3,2). Check others: (1,3): −1+5=4≠3; (2,3): −2+5=3 ✓ — both B and C work.")
 
         q(fun, E, "Which point lies on the line y = x − 4?",
-          "(3, 0)", "(4, 1)", "(6, 2)", "(8, 4)", "C",
-          "y = 6−4 = 2 ✓ for (6,2). Check: (3,0): 3−4=−1≠0; (4,1): 4−4=0≠1; (8,4): 8−4=4 ✓. Wait, D also works. Let me check: (6,2): 6−4=2 ✓; (8,4): 8−4=4 ✓. Let me revise.")
+          "(3, 0)", "(4, 1)", "(6, 2)", "(8, 3)", "C",
+          "y = 6−4 = 2 ✓ for (6,2). Check others: (3,0): 3−4=−1≠0; (4,1): 4−4=0≠1; (8,3): 8−4=4≠3.")
 
         q(fun, E, "The line y = 2x + 1 crosses the y-axis at which point?",
           "(0, 0)", "(0, 1)", "(1, 0)", "(0, 2)", "B",
@@ -1195,10 +1195,10 @@ class Command(BaseCommand):
           "Vertex form y = a(x−h)² + k has vertex at (h, k) = (3, 4).")
 
         q(fun, H,
-          "A function f is defined by f(x) = 3x − 7. If f(a) = f(2a − 1), "
+          "A function f is defined by f(x) = 3x − 7. If f(a) = 5, "
           "what is the value of a?",
           "3", "4", "5", "6", "B",
-          "3a−7 = 3(2a−1)−7 → 3a−7 = 6a−3−7 → 3a−7 = 6a−10 → 3=3a → a=... wait: 3a−7=6a−10 → −7+10=6a−3a → 3=3a → a=1. Let me recalculate. f(a)=3a−7; f(2a−1)=3(2a−1)−7=6a−3−7=6a−10. Set equal: 3a−7=6a−10 → 3=3a → a=1.")
+          "3a − 7 = 5 → 3a = 12 → a = 4.")
 
         q(fun, H,
           "If f(x) = 2x + 3, for what value of x does f(x) = f(x+1)?",
@@ -1244,10 +1244,10 @@ class Command(BaseCommand):
           "Pairs summing to 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) — 6 out of 36 total. P = 6/36 = 1/6.")
 
         q(dsp, H,
-          "A set of 8 data values has a sum of 96. Three values are removed, each "
-          "equal to 8. What is the new mean of the remaining values?",
-          "12", "14", "16", "18", "C",
-          "Remaining sum = 96−(3×8)=96−24=72. Remaining count = 5. Mean = 72/5 = 14.4. Hmm, that's not in the choices. Let me fix.")
+          "A set of 8 data values has a sum of 96. Two values equal to 6 are "
+          "removed. What is the new mean of the remaining values?",
+          "12", "14", "16", "18", "B",
+          "Remaining sum = 96 − (2×6) = 84. Remaining count = 6. Mean = 84/6 = 14.")
 
         q(dsp, H,
           "A set of 10 numbers has a mean of 15. If 5 is added to each number in "
