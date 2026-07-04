@@ -1,117 +1,61 @@
 /**
- * Windows-style calculator logic.
+ * Desmos graphing calculator panel — draggable & resizable.
+ * The Desmos API script is lazy-loaded the first time the panel opens,
+ * so the test page itself stays fast.
  */
 (function () {
-  let currentVal = '0';
-  let storedVal = null;
-  let operator = null;
-  let waitingForOperand = false;
-  let expression = '';
+  // Desmos' published demo API key — fine for local/classroom use.
+  const DESMOS_SRC = 'https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6';
 
-  function updateDisplay() {
-    const main = document.getElementById('calc-display');
-    const expr = document.getElementById('calc-expression');
-    if (main) main.textContent = currentVal;
-    if (expr) expr.textContent = expression;
+  let desmos = null;       // Desmos calculator instance
+  let loading = false;
+
+  function initDesmos() {
+    const elt = document.getElementById('desmos-calc');
+    if (!elt || desmos) return;
+    desmos = Desmos.GraphingCalculator(elt, {
+      expressions: true,
+      keypad: true,
+      settingsMenu: false,
+      border: false,
+      expressionsCollapsed: false,
+    });
   }
 
-  function press(val) {
-    switch (val) {
-      case 'C':
-        currentVal = '0'; storedVal = null; operator = null;
-        waitingForOperand = false; expression = '';
-        break;
+  function loadDesmosScript() {
+    if (window.Desmos) { initDesmos(); return; }
+    if (loading) return;
+    loading = true;
 
-      case 'CE':
-        currentVal = '0';
-        break;
-
-      case '⌫':
-        if (waitingForOperand) break;
-        currentVal = currentVal.length > 1 ? currentVal.slice(0, -1) : '0';
-        break;
-
-      case '+': case '−': case '×': case '÷':
-        if (storedVal !== null && !waitingForOperand) {
-          currentVal = String(calculate(storedVal, parseFloat(currentVal), operator));
-        }
-        storedVal = parseFloat(currentVal);
-        operator = val;
-        expression = currentVal + ' ' + val;
-        waitingForOperand = true;
-        break;
-
-      case '=':
-        if (storedVal !== null && operator) {
-          expression = storedVal + ' ' + operator + ' ' + currentVal + ' =';
-          currentVal = String(calculate(storedVal, parseFloat(currentVal), operator));
-          storedVal = null; operator = null; waitingForOperand = true;
-        }
-        break;
-
-      case '.':
-        if (waitingForOperand) { currentVal = '0.'; waitingForOperand = false; break; }
-        if (!currentVal.includes('.')) currentVal += '.';
-        break;
-
-      case '%':
-        currentVal = String(parseFloat(currentVal) / 100);
-        waitingForOperand = true;
-        break;
-
-      case '1/x':
-        if (parseFloat(currentVal) === 0) { currentVal = 'Cannot divide by zero'; waitingForOperand = true; break; }
-        currentVal = String(1 / parseFloat(currentVal));
-        waitingForOperand = true;
-        break;
-
-      case 'x²':
-        currentVal = String(Math.pow(parseFloat(currentVal), 2));
-        waitingForOperand = true;
-        break;
-
-      case '√x':
-        currentVal = parseFloat(currentVal) < 0 ? 'Invalid input' : String(Math.sqrt(parseFloat(currentVal)));
-        waitingForOperand = true;
-        break;
-
-      case '+/−':
-        currentVal = currentVal.startsWith('-') ? currentVal.slice(1) : '-' + currentVal;
-        break;
-
-      default:
-        // Digit
-        if (waitingForOperand) { currentVal = val; waitingForOperand = false; }
-        else currentVal = currentVal === '0' ? val : currentVal + val;
-    }
-    updateDisplay();
+    const script = document.createElement('script');
+    script.src = DESMOS_SRC;
+    script.onload = () => { loading = false; initDesmos(); };
+    script.onerror = () => {
+      loading = false;
+      const elt = document.getElementById('desmos-calc');
+      if (elt) {
+        elt.innerHTML = '<div class="desmos-fallback">⚠️ Could not load the Desmos calculator.<br>Check your internet connection and reopen this panel.</div>';
+      }
+    };
+    document.head.appendChild(script);
   }
 
-  function calculate(a, b, op) {
-    switch (op) {
-      case '+': return round(a + b);
-      case '−': return round(a - b);
-      case '×': return round(a * b);
-      case '÷': return b === 0 ? 'Cannot divide by zero' : round(a / b);
-      default: return b;
-    }
-  }
-
-  function round(n) {
-    return parseFloat(n.toFixed(10));
-  }
-
-  window.Calculator = { press };
-
-  // --- Draggable panel ---
+  // ---- Open / Close ----
   window.openCalculator = function () {
-    document.getElementById('calc-panel').style.display = 'block';
+    const panel = document.getElementById('calc-panel');
+    panel.style.display = 'flex';
+    if (!desmos) {
+      loadDesmosScript();
+    } else {
+      desmos.resize();
+    }
   };
 
   window.closeCalculator = function () {
     document.getElementById('calc-panel').style.display = 'none';
   };
 
+  // ---- Drag (header) ----
   (function makeDraggable() {
     let dragging = false, startX, startY, origLeft, origTop;
 
@@ -145,6 +89,41 @@
       document.addEventListener('mouseup', function () {
         if (dragging) { dragging = false; handle.style.cursor = 'grab'; }
       });
+    });
+  })();
+
+  // ---- Resize (bottom-right grip) ----
+  (function makeResizable() {
+    let resizing = false, startX, startY, startW, startH;
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const panel = document.getElementById('calc-panel');
+      const grip  = document.getElementById('calc-resize-handle');
+      if (!grip) return;
+
+      grip.addEventListener('mousedown', function (e) {
+        resizing = true;
+        const rect = panel.getBoundingClientRect();
+        panel.style.right  = 'auto';
+        panel.style.bottom = 'auto';
+        panel.style.left   = rect.left + 'px';
+        panel.style.top    = rect.top  + 'px';
+        startX = e.clientX;
+        startY = e.clientY;
+        startW = rect.width;
+        startH = rect.height;
+        e.preventDefault();
+        e.stopPropagation();
+      });
+
+      document.addEventListener('mousemove', function (e) {
+        if (!resizing) return;
+        panel.style.width  = Math.max(340, startW + e.clientX - startX) + 'px';
+        panel.style.height = Math.max(300, startH + e.clientY - startY) + 'px';
+        if (desmos) desmos.resize();
+      });
+
+      document.addEventListener('mouseup', function () { resizing = false; });
     });
   })();
 })();

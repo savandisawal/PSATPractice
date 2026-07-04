@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="{{ csrf_token }}">
   <title>{% block title %}PSAT Practice{% endblock %}</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- DaisyUI — must load before Tailwind CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <!-- Tailwind CDN -->
@@ -18,36 +22,34 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   {% block extra_head %}{% endblock %}
 </head>
-<body class="bg-base-200 min-h-screen">
+<body class="min-h-screen">
 
 {% if user.is_authenticated %}
-<div class="navbar bg-primary text-primary-content shadow-md px-6">
-  <div class="navbar-start">
-    <a href="{% url 'dashboard' %}" class="text-xl font-extrabold tracking-tight">
-      📘 PSAT Practice
-    </a>
-  </div>
-  <div class="navbar-end gap-1">
-    {% if user.is_staff %}
-      <a href="{% url 'pending_approvals' %}" class="btn btn-ghost btn-sm text-primary-content">Approvals</a>
-      <a href="{% url 'admin:index' %}" class="btn btn-ghost btn-sm text-primary-content">Admin Panel</a>
-    {% else %}
-      <a href="{% url 'dashboard' %}" class="btn btn-ghost btn-sm text-primary-content">Dashboard</a>
-      <a href="{% url 'history' %}" class="btn btn-ghost btn-sm text-primary-content">History</a>
-    {% endif %}
-    <a href="{% url 'logout' %}"
-       class="btn btn-sm btn-outline border-primary-content/60 text-primary-content
-              hover:bg-primary-content hover:text-primary ml-2">
-      Logout · {{ user.username }}
-    </a>
-  </div>
-</div>
+<nav class="glass-nav">
+  <a href="{% url 'dashboard' %}" class="brand-logo">
+    <span class="brand-badge">📘</span>
+    <span class="brand-text">PSAT Practice</span>
+  </a>
+  <div class="flex-1"></div>
+  {% if user.is_staff %}
+    <a href="{% url 'pending_approvals' %}" class="nav-link">Approvals</a>
+    <a href="{% url 'admin:index' %}" class="nav-link">Admin Panel</a>
+  {% else %}
+    <a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a>
+    <a href="{% url 'history' %}" class="nav-link">History</a>
+  {% endif %}
+  <a href="{% url 'logout' %}" class="nav-chip ml-2">
+    {{ user.username }}
+    <span class="inline-flex items-center justify-center w-6 h-6 rounded-full text-white text-xs"
+          style="background:var(--grad-btn)">→</span>
+  </a>
+</nav>
 {% endif %}
 
 {% if messages %}
 <div class="max-w-4xl mx-auto px-4 mt-4 space-y-2">
   {% for message in messages %}
-  <div role="alert" class="alert shadow-sm
+  <div role="alert" class="alert shadow-sm rounded-2xl
     {% if message.tags == 'success' %}alert-success
     {% elif message.tags == 'error' %}alert-error
     {% elif message.tags == 'warning' %}alert-warning

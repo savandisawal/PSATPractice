@@ -4,9 +4,20 @@
 {% block content %}
 <div class="max-w-5xl mx-auto py-8 px-4">
 
-  <div class="mb-7">
-    <h1 class="text-2xl font-extrabold">Welcome back, {{ user.first_name|default:user.username }}! 👋</h1>
-    <p class="mt-1" style="color:var(--text-muted)">Ready to practice for the PSAT?</p>
+  <!-- Hero banner with floating 3D shapes -->
+  <div class="hero-banner mb-8 rise-in">
+    {% include 'partials/floating_shapes.html' %}
+    <h1>Welcome back, {{ user.first_name|default:user.username }}! 👋</h1>
+    <p>Ready to practice for the PSAT? Pick a subject and jump in.</p>
+    <div class="flex gap-2 mt-4 flex-wrap relative z-10">
+      {% for subject in subjects %}
+      <a href="{% url 'start_test' subject.slug %}"
+         class="px-4 py-1.5 rounded-full text-sm font-bold no-underline transition hover:scale-105"
+         style="background:rgba(255,255,255,.2);color:#fff;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35)">
+        {{ subject.icon }} {{ subject.name }}
+      </a>
+      {% endfor %}
+    </div>
   </div>
 
   <!-- Subject cards -->
@@ -30,14 +41,14 @@
         {% endif %}
       {% endfor %}
       {% endwith %}
-      <button class="btn btn-primary btn-sm mt-4"
+      <button class="btn-grad mt-4 text-sm"
               onclick="event.stopPropagation();window.location.href='{% url 'start_test' subject.slug %}'">
         Start Test →
       </button>
     </div>
     {% empty %}
-    <div class="card bg-base-100 shadow col-span-full">
-      <div class="card-body text-center py-12" style="color:var(--text-muted)">
+    <div class="soft-card col-span-full">
+      <div class="text-center py-12" style="color:var(--text-muted)">
         No subjects configured yet. Ask your admin to set them up.
       </div>
     </div>
@@ -46,55 +57,51 @@
 
   <!-- Progress chart -->
   {% if chart_labels != "[]" %}
-  <div class="card bg-base-100 shadow mb-8">
-    <div class="card-body">
-      <h2 class="card-title text-base font-bold mb-3">Recent Performance</h2>
-      <canvas id="progressChart" height="90"></canvas>
-    </div>
+  <div class="soft-card mb-8 p-6">
+    <h2 class="text-base font-extrabold mb-3">📈 Recent Performance</h2>
+    <canvas id="progressChart" height="90"></canvas>
   </div>
   {% endif %}
 
   <!-- Recent attempts -->
   {% if attempts %}
-  <div class="card bg-base-100 shadow">
-    <div class="card-body">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="card-title text-base font-bold">Recent Attempts</h2>
-        <a href="{% url 'history' %}" class="text-sm font-semibold" style="color:var(--primary)">View all →</a>
-      </div>
-      <div class="overflow-x-auto">
-        <table class="table table-zebra text-sm">
-          <thead>
-            <tr>
-              <th>Subject</th>
-              <th>Date</th>
-              <th>Score</th>
-              <th>Accuracy</th>
-              <th>Duration</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for attempt in attempts %}
-            <tr>
-              <td>{{ attempt.subject.icon }} {{ attempt.subject.name }}</td>
-              <td>{{ attempt.started_at|date:"M d, Y H:i" }}</td>
-              <td>{{ attempt.score }}/{{ attempt.total_questions }}</td>
-              <td>
-                <span class="font-bold"
-                  style="color:{% if attempt.accuracy >= 80 %}var(--success){% elif attempt.accuracy >= 60 %}var(--warning){% else %}var(--danger){% endif %}">
-                  {{ attempt.accuracy|floatformat:1 }}%
-                </span>
-              </td>
-              <td>{{ attempt.formatted_duration }}</td>
-              <td>
-                <a href="{% url 'test_results' attempt.pk %}" class="btn btn-outline btn-xs">Review</a>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
+  <div class="soft-card p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-base font-extrabold">🕑 Recent Attempts</h2>
+      <a href="{% url 'history' %}" class="text-sm font-semibold" style="color:var(--primary)">View all →</a>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Score</th>
+            <th>Accuracy</th>
+            <th>Duration</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for attempt in attempts %}
+          <tr>
+            <td>{{ attempt.subject.icon }} {{ attempt.subject.name }}</td>
+            <td>{{ attempt.started_at|date:"M d, Y H:i" }}</td>
+            <td><strong>{{ attempt.score }}/{{ attempt.total_questions }}</strong></td>
+            <td>
+              <span class="font-bold"
+                style="color:{% if attempt.accuracy >= 80 %}var(--success){% elif attempt.accuracy >= 60 %}var(--warning){% else %}var(--danger){% endif %}">
+                {{ attempt.accuracy|floatformat:1 }}%
+              </span>
+            </td>
+            <td>{{ attempt.formatted_duration }}</td>
+            <td>
+              <a href="{% url 'test_results' attempt.pk %}" class="btn btn-outline btn-xs rounded-full">Review</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </div>
   {% endif %}
@@ -105,6 +112,9 @@
 {% if chart_labels != "[]" %}
 <script>
 const ctx = document.getElementById('progressChart').getContext('2d');
+const grad = ctx.createLinearGradient(0, 0, 0, 220);
+grad.addColorStop(0, 'rgba(124,58,237,.25)');
+grad.addColorStop(1, 'rgba(6,182,212,.02)');
 new Chart(ctx, {
   type: 'line',
   data: {
@@ -112,11 +122,12 @@ new Chart(ctx, {
     datasets: [{
       label: 'Score',
       data: {{ chart_scores|safe }},
-      borderColor: '#4f46e5',
-      backgroundColor: 'rgba(79,70,229,.1)',
+      borderColor: '#7c3aed',
+      backgroundColor: grad,
       borderWidth: 2.5,
       pointRadius: 5,
-      tension: 0.3,
+      pointBackgroundColor: '#7c3aed',
+      tension: 0.35,
       fill: true,
     }],
   },

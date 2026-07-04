@@ -3,64 +3,62 @@
 
 {% block content %}
 <div class="max-w-5xl mx-auto py-8 px-4">
-  <div class="flex justify-between items-center mb-6">
-    <h1 class="text-2xl font-extrabold">Test History</h1>
-    <a href="{% url 'dashboard' %}" class="btn btn-outline btn-sm">← Dashboard</a>
+  <div class="flex justify-between items-center mb-6 rise-in">
+    <h1 class="text-2xl font-extrabold tracking-tight">🕑 Test History</h1>
+    <a href="{% url 'dashboard' %}" class="btn btn-outline btn-sm rounded-full">← Dashboard</a>
   </div>
 
   {% if attempts %}
-  <div class="card bg-base-100 shadow overflow-x-auto">
-    <div class="card-body p-0">
-      <table class="table table-zebra text-sm">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Subject</th>
-            <th>Date & Time</th>
-            <th>Score</th>
-            <th>Correct</th>
-            <th>Incorrect</th>
-            <th>Accuracy</th>
-            <th>Duration</th>
-            <th>Status</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for attempt in attempts %}
-          <tr>
-            <td class="text-xs" style="color:var(--text-muted)">{{ forloop.counter }}</td>
-            <td>{{ attempt.subject.icon }} {{ attempt.subject.name }}</td>
-            <td>{{ attempt.started_at|date:"M d, Y H:i" }}</td>
-            <td><strong>{{ attempt.score }}/{{ attempt.total_questions }}</strong></td>
-            <td class="font-bold" style="color:var(--success)">{{ attempt.correct_count }}</td>
-            <td class="font-bold" style="color:var(--danger)">{{ attempt.incorrect_count }}</td>
-            <td>
-              <span class="font-bold"
-                style="color:{% if attempt.accuracy >= 80 %}var(--success){% elif attempt.accuracy >= 60 %}var(--warning){% else %}var(--danger){% endif %}">
-                {{ attempt.accuracy|floatformat:1 }}%
-              </span>
-            </td>
-            <td>{{ attempt.formatted_duration }}</td>
-            <td>
-              {% if attempt.status == 'timed_out' %}
-              <span class="badge badge-warning badge-sm">Timed Out</span>
-              {% else %}
-              <span class="badge badge-success badge-sm">Submitted</span>
-              {% endif %}
-            </td>
-            <td>
-              <a href="{% url 'test_results' attempt.pk %}" class="btn btn-outline btn-xs">Review</a>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+  <div class="soft-card overflow-x-auto rise-in">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Subject</th>
+          <th>Date &amp; Time</th>
+          <th>Score</th>
+          <th>Correct</th>
+          <th>Incorrect</th>
+          <th>Accuracy</th>
+          <th>Duration</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for attempt in attempts %}
+        <tr>
+          <td class="text-xs" style="color:var(--text-muted)">{{ forloop.counter }}</td>
+          <td>{{ attempt.subject.icon }} {{ attempt.subject.name }}</td>
+          <td>{{ attempt.started_at|date:"M d, Y H:i" }}</td>
+          <td><strong>{{ attempt.score }}/{{ attempt.total_questions }}</strong></td>
+          <td class="font-bold" style="color:var(--success)">{{ attempt.correct_count }}</td>
+          <td class="font-bold" style="color:var(--danger)">{{ attempt.incorrect_count }}</td>
+          <td>
+            <span class="font-bold"
+              style="color:{% if attempt.accuracy >= 80 %}var(--success){% elif attempt.accuracy >= 60 %}var(--warning){% else %}var(--danger){% endif %}">
+              {{ attempt.accuracy|floatformat:1 }}%
+            </span>
+          </td>
+          <td>{{ attempt.formatted_duration }}</td>
+          <td>
+            {% if attempt.status == 'timed_out' %}
+            <span class="badge badge-warning badge-sm">Timed Out</span>
+            {% else %}
+            <span class="badge badge-success badge-sm">Submitted</span>
+            {% endif %}
+          </td>
+          <td>
+            <a href="{% url 'test_results' attempt.pk %}" class="btn btn-outline btn-xs rounded-full">Review</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
   {% else %}
-  <div class="card bg-base-100 shadow">
-    <div class="card-body text-center py-16">
+  <div class="soft-card rise-in">
+    <div class="text-center py-16">
       <div class="text-5xl mb-4">📋</div>
       <p style="color:var(--text-muted)">
         No completed tests yet.

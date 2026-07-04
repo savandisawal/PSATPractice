@@ -5,7 +5,8 @@
 <div class="max-w-4xl mx-auto py-8 px-4">
 
   <!-- Hero score card -->
-  <div class="result-hero mb-6">
+  <div class="result-hero mb-6 rise-in">
+    {% include 'partials/floating_shapes.html' %}
     {% if attempt.status == 'timed_out' %}
     <div class="inline-block text-sm px-3 py-1 rounded-full mb-3" style="background:rgba(255,255,255,.18)">
       ⏰ Time expired — auto-submitted
@@ -17,7 +18,7 @@
   </div>
 
   <!-- DaisyUI Stats -->
-  <div class="stats shadow w-full bg-base-100 mb-6 flex-wrap">
+  <div class="stats w-full bg-base-100 mb-6 flex-wrap soft-card">
     <div class="stat">
       <div class="stat-title">Correct</div>
       <div class="stat-value text-success">{{ attempt.correct_count }}</div>
@@ -42,15 +43,15 @@
 
   <!-- Action buttons -->
   <div class="flex gap-3 flex-wrap mb-8">
-    <a href="{% url 'start_test' subject.slug %}" class="btn btn-primary">Retry Test</a>
-    <a href="{% url 'dashboard' %}" class="btn btn-outline">Dashboard</a>
+    <a href="{% url 'start_test' subject.slug %}" class="btn-grad">Retry Test</a>
+    <a href="{% url 'dashboard' %}" class="btn btn-outline rounded-full">Dashboard</a>
   </div>
 
   <!-- Full Review -->
   <h2 class="text-base font-bold mb-4">Full Review</h2>
 
   {% for tq in test_questions %}
-  <div class="card bg-base-100 shadow mb-4
+  <div class="card soft-card mb-4
     {% if tq.is_correct %}answer-correct{% elif tq.selected_answer %}answer-incorrect{% else %}answer-unanswered{% endif %}">
     <div class="card-body py-4 px-5">
 

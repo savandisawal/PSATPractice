@@ -52,7 +52,9 @@ There are no automated tests in this project.
 
 - `templates/base.html` — shared layout; loads Tailwind CDN, HTMX, Chart.js, and `static/css/style.css`.
 - App templates live in `accounts/templates/accounts/` and `practice/templates/practice/`.
-- `static/js/`: `timer.js` (CountdownTimer class, auto-submits on expire), `test.js` (test UI logic), `whiteboard.js` (canvas), `calculator.js` (pure JS evaluator).
+- `static/js/`: `timer.js` (CountdownTimer class, auto-submits on expire), `test.js` (test UI logic), `whiteboard.js` (canvas), `calculator.js` (draggable/resizable panel that lazy-loads the Desmos graphing calculator API).
+- `templates/partials/floating_shapes.html` — decorative animated CSS 3D shapes (cubes/spheres/rings), included inside any `position:relative` container (auth pages, dashboard hero, results hero).
+- Static files are served from `staticfiles/` when `DEBUG=False` (the default) — run `python manage.py collectstatic --noinput` after editing anything in `static/`.
 
 ### Key Design Decisions
 

@@ -3,15 +3,17 @@
 
 {% block content %}
 <div class="auth-page">
+  {% include 'partials/floating_shapes.html' %}
   <div class="auth-card">
     <div class="auth-logo">
-      <h1>📘 PSAT Practice</h1>
+      <span class="auth-emblem">📘</span>
+      <h1>PSAT Practice</h1>
       <p>Grade 8 PSAT Study Tool</p>
     </div>
 
     {% if messages %}
       {% for message in messages %}
-      <div role="alert" class="alert alert-{{ message.tags|default:'info' }} mb-3 text-sm">
+      <div role="alert" class="alert alert-{{ message.tags|default:'info' }} mb-3 text-sm rounded-2xl">
         <span>{{ message }}</span>
       </div>
       {% endfor %}
@@ -32,7 +34,7 @@
       </div>
       {% endfor %}
 
-      <button type="submit" class="btn btn-primary w-full justify-center mt-2">Sign In</button>
+      <button type="submit" class="btn-grad w-full mt-2">Sign In</button>
     </form>
 
     <p class="text-center mt-5 text-sm" style="color:var(--text-muted)">
