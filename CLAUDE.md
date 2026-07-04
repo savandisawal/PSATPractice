@@ -55,6 +55,7 @@ There are no automated tests in this project.
 - `static/js/`: `timer.js` (CountdownTimer class, auto-submits on expire), `test.js` (test UI logic), `whiteboard.js` (canvas), `calculator.js` (draggable/resizable panel that lazy-loads the Desmos graphing calculator API).
 - `templates/partials/floating_shapes.html` — decorative animated CSS 3D shapes (cubes/spheres/rings), included inside any `position:relative` container (auth pages, dashboard hero, results hero).
 - Static files are served from `staticfiles/` when `DEBUG=False` (the default) — run `python manage.py collectstatic --noinput` after editing anything in `static/`.
+- **PWA**: installable on iPhone/Android. `static/manifest.json` + icons in `static/icons/`; service worker lives at `templates/sw.js` and is served at `/sw.js` via a TemplateView route in `psat_project/urls.py` (root scope). Bump `CACHE_VERSION` in sw.js to invalidate caches. Offline fallback: `static/offline.html`.
 
 ### Key Design Decisions
 

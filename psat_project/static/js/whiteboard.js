@@ -108,7 +108,8 @@
       const handle = document.getElementById('wb-drag-handle');
       if (!handle) return;
 
-      handle.addEventListener('mousedown', function (e) {
+      // Pointer events cover both mouse and touch dragging
+      handle.addEventListener('pointerdown', function (e) {
         if (e.target.tagName === 'BUTTON') return;
         dragging = true;
         const rect = panel.getBoundingClientRect();
@@ -124,14 +125,16 @@
         e.preventDefault();
       });
 
-      document.addEventListener('mousemove', function (e) {
+      document.addEventListener('pointermove', function (e) {
         if (!dragging) return;
         panel.style.left = (origLeft + e.clientX - startX) + 'px';
         panel.style.top  = (origTop  + e.clientY - startY) + 'px';
       });
 
-      document.addEventListener('mouseup', function () {
-        if (dragging) { dragging = false; handle.style.cursor = 'grab'; }
+      ['pointerup', 'pointercancel'].forEach(function (evt) {
+        document.addEventListener(evt, function () {
+          if (dragging) { dragging = false; handle.style.cursor = 'grab'; }
+        });
       });
     });
   })();
@@ -145,7 +148,7 @@
       const grip  = document.getElementById('wb-resize-handle');
       if (!grip) return;
 
-      grip.addEventListener('mousedown', function (e) {
+      grip.addEventListener('pointerdown', function (e) {
         resizing = true;
         const rect = panel.getBoundingClientRect();
         panel.style.right  = 'auto';
@@ -160,14 +163,16 @@
         e.stopPropagation();
       });
 
-      document.addEventListener('mousemove', function (e) {
+      document.addEventListener('pointermove', function (e) {
         if (!resizing) return;
         panel.style.width  = Math.max(380, startW + e.clientX - startX) + 'px';
         panel.style.height = Math.max(250, startH + e.clientY - startY) + 'px';
         setupCanvas();   // clears drawing — acceptable for a scratchpad
       });
 
-      document.addEventListener('mouseup', function () { resizing = false; });
+      ['pointerup', 'pointercancel'].forEach(function (evt) {
+        document.addEventListener(evt, function () { resizing = false; });
+      });
     });
   })();
 })();
